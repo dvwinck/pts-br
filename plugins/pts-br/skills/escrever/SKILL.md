@@ -33,8 +33,9 @@ Pedido: $ARGUMENTS
 
 ## Procedimento
 
-1. Identifique o tipo de texto, o leitor e o objetivo. Se o 06 tem um modelo para o tipo, leia o
-   exemplo e use a mesma estrutura.
+1. Identifique o tipo de texto, o leitor e o objetivo. Se o 06 tem um modelo para o tipo, leia
+   apenas a seção `## Exemplo N` deste modelo e use a mesma estrutura. O 06 é um arquivo grande:
+   use o Grep para encontrar a linha do título e leia a seção a partir desta linha.
 2. Reúna os fatos: valores, nomes de sistemas, ambientes, permissões, prazos e responsáveis.
    - Não invente fatos. Se o pedido e o código não têm um dado necessário, pergunte ao usuário.
    - Se o usuário quer um rascunho sem a resposta, escreva um espaço reservado
@@ -50,7 +51,8 @@ Pedido: $ARGUMENTS
    - num documento novo, o cabeçalho `pts-br: "1.0"`.
 6. Para cada palavra com dúvida, use o Grep no dicionário e nos termos técnicos. Uma palavra fora
    dos 2 arquivos não é aprovada. Use a alternativa do dicionário ou escreva a frase de outra forma.
-7. Grave o texto num arquivo `.md`: o arquivo do usuário ou um arquivo temporário. Execute o linter:
+7. Grave o texto num arquivo `.md`: o arquivo do usuário ou um arquivo temporário fora do
+   repositório do usuário. Execute o linter:
 
    ```shell
    python3 ${CLAUDE_PLUGIN_ROOT}/especificacao/tools/check_spec.py <arquivo.md>
@@ -61,7 +63,7 @@ Pedido: $ARGUMENTS
 8. Corrija cada alerta. Para um falso positivo, mantenha o texto e escreva a causa do alerta na
    resposta. Um nome próprio, um literal ou um termo do projeto fora da lista branca não é um
    erro.
-9. Leia o texto de novo com as regras `[revisor]` do guia. Este passo é obrigatório. O linter não
+9. Leia o texto de novo com as regras da seção 3 do guia. Este passo é obrigatório. O linter não
    verifica o significado das palavras, a ordem dos passos nem o nível dos avisos. Verifique no
    mínimo estes itens:
    - "pode" apenas para capacidade ou permissão (R3.8). Para uma possibilidade, escreva a condição
