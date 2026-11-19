@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Vulnerabilidade de segurança
+    url: https://github.com/dvwinck/pts-br/security/advisories/new
+    about: Informe uma vulnerabilidade de forma privada. Não crie uma issue pública.
