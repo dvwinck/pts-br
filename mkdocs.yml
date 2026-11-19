@@ -10,8 +10,11 @@ copyright: Texto sob a licença CC BY 4.0. Não é uma tradução oficial do ASD
 
 theme:
   name: material
+  custom_dir: overrides
   language: pt-BR
+  font: false
   features:
+    - navigation.tabs
     - navigation.sections
     - navigation.top
     - navigation.footer
@@ -22,13 +25,13 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: custom
       toggle:
         icon: material/weather-night
         name: Modo escuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
+      primary: custom
       toggle:
         icon: material/weather-sunny
         name: Modo claro
@@ -36,6 +39,12 @@ theme:
 plugins:
   - search:
       lang: pt
+
+extra_css:
+  - assets/pts.css
+
+extra_javascript:
+  - assets/pts.js
 
 markdown_extensions:
   - toc:
@@ -53,41 +62,42 @@ markdown_extensions:
   - pymdownx.inlinehilite
 
 nav:
-  - Início: README.md
-  - Especificação:
-      - 01 Introdução: 01-introducao.md
-      - 02 Regras de escrita: 02-regras.md
-      - 03 Dicionário controlado: 03-dicionario.md
-      - 04 Termos técnicos: 04-termos-tecnicos.md
-      - 05 Governança: 05-governanca.md
-      - 06 Exemplos: 06-exemplos.md
+  - Início: index.md
+  - Introdução: 01-introducao.md
+  - Regras: 02-regras.md
+  - Dicionário: 03-dicionario.md
+  - Termos técnicos: 04-termos-tecnicos.md
+  - Governança: 05-governanca.md
+  - Exemplos: 06-exemplos.md
+  - Sobre:
+      - Leia-me do repositório: leia-me.md
       - Versões (CHANGELOG): CHANGELOG.md
-  - Processo de criação:
-      - Briefing: BRIEF.md
-      - Rubrica de avaliação: reviews/RUBRICA.md
-      - Decisões da rodada 2: reviews/DECISOES-R2.md
-      - Decisões da rodada 3: reviews/DECISOES-R3.md
-      - Decisões da rodada 4: reviews/DECISOES-R4.md
-      - Avaliações da rodada 1:
-          - Processos: reviews/round-1/processos.md
-          - Tecnologia: reviews/round-1/tecnologia.md
-          - Desenvolvimento: reviews/round-1/desenvolvimento.md
-          - Documentação: reviews/round-1/documentacao.md
-      - Avaliações da rodada 2:
-          - Processos: reviews/round-2/processos.md
-          - Tecnologia: reviews/round-2/tecnologia.md
-          - Desenvolvimento: reviews/round-2/desenvolvimento.md
-          - Documentação: reviews/round-2/documentacao.md
-      - Avaliações da rodada 3:
-          - Processos: reviews/round-3/processos.md
-          - Tecnologia: reviews/round-3/tecnologia.md
-          - Desenvolvimento: reviews/round-3/desenvolvimento.md
-          - Documentação: reviews/round-3/documentacao.md
-      - Avaliações da rodada 4:
-          - Processos: reviews/round-4/processos.md
-          - Tecnologia: reviews/round-4/tecnologia.md
-          - Desenvolvimento: reviews/round-4/desenvolvimento.md
-          - Documentação: reviews/round-4/documentacao.md
+      - Processo de criação:
+          - Briefing: BRIEF.md
+          - Rubrica de avaliação: reviews/RUBRICA.md
+          - Decisões da rodada 2: reviews/DECISOES-R2.md
+          - Decisões da rodada 3: reviews/DECISOES-R3.md
+          - Decisões da rodada 4: reviews/DECISOES-R4.md
+          - Avaliações da rodada 1:
+              - Processos: reviews/round-1/processos.md
+              - Tecnologia: reviews/round-1/tecnologia.md
+              - Desenvolvimento: reviews/round-1/desenvolvimento.md
+              - Documentação: reviews/round-1/documentacao.md
+          - Avaliações da rodada 2:
+              - Processos: reviews/round-2/processos.md
+              - Tecnologia: reviews/round-2/tecnologia.md
+              - Desenvolvimento: reviews/round-2/desenvolvimento.md
+              - Documentação: reviews/round-2/documentacao.md
+          - Avaliações da rodada 3:
+              - Processos: reviews/round-3/processos.md
+              - Tecnologia: reviews/round-3/tecnologia.md
+              - Desenvolvimento: reviews/round-3/desenvolvimento.md
+              - Documentação: reviews/round-3/documentacao.md
+          - Avaliações da rodada 4:
+              - Processos: reviews/round-4/processos.md
+              - Tecnologia: reviews/round-4/tecnologia.md
+              - Desenvolvimento: reviews/round-4/desenvolvimento.md
+              - Documentação: reviews/round-4/documentacao.md
 
 validation:
   links:

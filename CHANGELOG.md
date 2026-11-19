@@ -31,7 +31,7 @@ commit da tag e atualiza os números.
    regras atuais com o Vale é um critério de entrada do Piloto ([`05-governanca.md`](05-governanca.md), seção
    3.2), não um critério desta versão (decisão E8).
 5. `python3 tools/check_spec.py --spec --falhar`: 0 alertas.
-6. `python3 tools/check_spec.py --lista-branca --spec --meta 1`: 62 de 74 430 palavras fora
+6. `python3 tools/check_spec.py --lista-branca --spec --meta 1`: 61 de 74 392 palavras fora
    da lista branca (0,08%), 36 palavras diferentes. Por arquivo: README 0,22%, 01 0%, 02 0%,
    03 0,06%, 04 0,34%, 05 0,03%, 06 0%. Desde a revisão 4, um termo composto do 04 ("banco
    de dados", "roda do mouse") e uma locução do 03 são unidades: a lista branca não aceita a
@@ -144,7 +144,7 @@ commit da tag e atualiza os números.
 - [R10.6](02-regras.md#r106-escreva-rótulos-de-botão-e-diálogos-de-confirmação-com-o-verbo-da-ação-revisor): a frase da consequência num diálogo de confirmação usa o sujeito de [R10.4](02-regras.md#r104-escreva-a-mensagem-de-erro-com-o-que-aconteceu-e-o-que-fazer-revisor): o objeto afetado ou, como reserva, "o sistema". O Exemplo 4 do 06 segue esta regra.
 
 ### Corrigido
-- Autoconformidade de forma (D1, E1, G2): o README, o 01, o 02, o 04, o 05 e os textos PTS-BR do 06 não usam as palavras da lista "Não aprovada" do 03 (`check_spec.py --spec`). O modo `--lista-branca` mostra 62 palavras fora da lista branca em 74 430 palavras do texto normativo (0,08%), com os termos compostos como unidades. A lista branca verifica a forma, não o significado. O critério 6 acima mostra o resultado por arquivo.
+- Autoconformidade de forma (D1, E1, G2): o README, o 01, o 02, o 04, o 05 e os textos PTS-BR do 06 não usam as palavras da lista "Não aprovada" do 03 (`check_spec.py --spec`). O modo `--lista-branca` mostra 61 palavras fora da lista branca em 74 392 palavras do texto normativo (0,08%), com os termos compostos como unidades. A lista branca verifica a forma, não o significado. O critério 6 acima mostra o resultado por arquivo.
 - 02, 05 e 06: palavras não aprovadas em prosa. Exemplos: "função" com o significado geral, "principalmente", "terceira", "demais", "muitos", "status" e PASSAR com o significado de "ter sucesso".
 - Frases com mais de 25 palavras (texto descritivo) ou mais de 20 palavras (procedimento) no 01, no 02, no 04 e no 06.
 - `PalavrasNaoAprovadas`: não alerta "status" no nome técnico "código de status" nem um literal em negrito ou em código ([R8.8](02-regras.md#r88-use-cada-formato-tipográfico-com-um-único-significado-revisor)). O gerador não cria a forma "statuss".
