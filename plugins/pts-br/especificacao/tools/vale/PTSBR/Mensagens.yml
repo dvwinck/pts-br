@@ -1,0 +1,21 @@
+# R10.5, R10.7, R10.8 (Seção 10) — padrões mecânicos das mensagens de interface.
+# Apenas para mensagens de interface: o modo check_spec.py --mensagens ativa esta regra.
+# O .vale.ini desliga a regra nos arquivos Markdown (PTSBR.Mensagens = NO).
+# Encontra: "(s)" e "(es)" (R10.8), variável por posição %s, %d e {0} (R10.8), artigo
+# imediatamente antes de uma variável (R10.8), "com sucesso" (R10.7), mensagens gerais
+# "Algo deu errado", "Erro desconhecido" e "Falha na operação" (R10.5), interjeições
+# "Ops", "Opa" e "Ué" (R10.5) e o ponto de exclamação (R10.5, R10.7).
+extends: existence
+message: "R10.5, R10.7, R10.8: '%s' não é aprovado numa mensagem de interface."
+level: warning
+ignorecase: true
+nonword: true
+tokens:
+  - '\((?:s|es)\)'
+  - '%(?:\d+\$)?[sdif@]'
+  - '\{\d+\}'
+  - '(?<![\p{L}-])(?:o|a|os|as|um|uma)\s+(?:\{[^}\s,]+\}|%(?:\d+\$)?[sd])'
+  - '(?<![\p{L}-])com\s+sucesso(?![\p{L}-])'
+  - '(?<![\p{L}-])(?:algo\s+deu\s+errado|erro\s+desconhecido|falha\s+na\s+operação)(?![\p{L}-])'
+  - '(?<![\p{L}-])(?:ops|opa|ué)(?![\p{L}-])'
+  - '!'

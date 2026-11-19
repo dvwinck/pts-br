@@ -1,0 +1,13 @@
+# R1.8 (Seção 1) — "o mesmo" no lugar de um substantivo.
+# Alerta quando "mesmo" vem antes de pontuação ou de um verbo, conector ou preposição.
+# "O mesmo arquivo" (determinante) e "com o mesmo e-mail" não geram alerta:
+# o lookahead (?![\p{L}-]) não aceita o hífen de "e-mail". "O resultado é o mesmo." também não
+# gera alerta: depois de "é", "são", "fica" e "continua", "o mesmo" é um adjetivo. "é o mesmo que"
+# recebe apenas o alerta de PalavrasNaoAprovadas.
+extends: existence
+message: "R1.8: em '%s', 'mesmo' substitui um substantivo. Repita o substantivo."
+level: warning
+ignorecase: true
+nonword: true
+tokens:
+  - '(?<![\p{L}-])(?<!é\s)(?<!são\s)(?<!fica\s)(?<!ficam\s)(?<!continua\s)(?<!continuam\s)(?:o|a|os|as|do|da|dos|das|no|na|nos|nas|ao|à|aos|às|pelo|pela|pelos|pelas)\s+mesm[oa]s?(?:\s*[.,;:!?)]|\s+(?:é|são|está|estão|foi|foram|fica|ficam|vai|vão|irá|irão|deve|devem|pode|podem|tem|têm|não|já|e|ou|para|com|em|no|na|nos|nas|do|da|ao|à|que|se|retorna|retornam|mostra|mostram|contém|usa|usam|precisa|precisam|utiliza|utilizam|funciona|funcionam|recebe|recebem|aparece|aparecem)(?![\p{L}-]))'

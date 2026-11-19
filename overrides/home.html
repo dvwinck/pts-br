@@ -143,6 +143,19 @@ python3 tools/check_spec.py --mensagens locales/pt-BR.json</code></pre></div>
   <p class="pts-aviso pts-aviso--nota"><strong class="pts-aviso__titulo">NOTA</strong> O linter em Python é a referência da versão 1.0.0. As regras desta versão ainda não têm resultado com o Vale. A lista branca verifica a forma das palavras. O revisor verifica o significado.</p>
 </section>
 
+<section aria-labelledby="pts-plugin" class="pts-secao">
+  <h2 id="pts-plugin">Use o PTS-BR no Claude Code</h2>
+  <p class="pts-sub">O plugin <code>pts-br</code> escreve, revisa e ativa o padrão PTS-BR no Claude Code. Para instalar o plugin, execute estes comandos no Claude Code:</p>
+<div class="language-text highlight"><pre><code>/plugin marketplace add dvwinck/pts-br
+/plugin install pts-br@pts-br</code></pre></div>
+  <div class="pts-grade">
+    <div class="pts-cartao"><h3><code>/pts-br:escrever</code></h3><p>Escreve ou reescreve um texto técnico em PTS-BR. Antes da resposta, executa o linter no texto.</p></div>
+    <div class="pts-cartao"><h3><code>/pts-br:revisar</code></h3><p>Avalia um texto, classifica os desvios em S1, S2 e S3 e mostra o resultado da revisão.</p></div>
+    <div class="pts-cartao"><h3><code>/pts-br:adotar</code></h3><p>Ativa o PTS-BR nas respostas do Claude Code até o fim da sessão. Para todas as sessões, use <code>/output-style</code> com a opção <strong>PTS-BR</strong>.</p></div>
+  </div>
+  <p><a class="pts-link-forte" href="https://github.com/dvwinck/pts-br/blob/main/plugins/pts-br/README.md" target="_blank" rel="noopener">Leia a descrição do plugin <span class="pts-chip">Abre em nova aba</span></a></p>
+</section>
+
 <section class="pts-secao pts-rodape-home">
   <a href="leia-me/">Leia-me do repositório</a>
   <a href="CHANGELOG/">Versões (CHANGELOG)</a>

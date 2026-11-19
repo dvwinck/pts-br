@@ -175,6 +175,7 @@
       });
     });
 
+    if (!linhas.length) return;
     var nA = linhas.filter(function (l) { return l.tipo === "a"; }).length;
     var nN = linhas.filter(function (l) { return l.tipo === "n"; }).length;
     var painel = document.createElement("div");

@@ -1,0 +1,13 @@
+{
+  "name": "pts-br",
+  "displayName": "PTS-BR — Português Técnico Simplificado",
+  "version": "1.0.0",
+  "description": "Escreva e revise documentação técnica em PTS-BR, a linguagem controlada para o português do Brasil inspirada no ASD-STE100. Inclui a especificação 1.0.0, o linter em Python e um estilo de saída que ativa o padrão no Claude Code.",
+  "author": {
+    "name": "dvwinck"
+  },
+  "homepage": "https://dvwinck.github.io/pts-br/",
+  "repository": "https://github.com/dvwinck/pts-br",
+  "license": "CC-BY-4.0",
+  "keywords": ["pt-br", "linguagem controlada", "documentação técnica", "ste100", "revisão de texto"]
+}

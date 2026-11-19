@@ -1,0 +1,11 @@
+# R1.9 (Seção 1) — "onde" fora do sentido de lugar.
+# Não alerta depois de um substantivo de lugar ("a pasta onde", "o arquivo onde") nem numa
+# pergunta ("Onde fica o arquivo?"). O revisor confirma os outros casos: "onde" depois de um
+# nome de lugar fora da lista.
+extends: existence
+message: "R1.9: '%s' fora do sentido de lugar? Use 'em que' ou escreva outra frase."
+level: warning
+ignorecase: true
+nonword: true
+tokens:
+  - '(?<![\p{L}-])(?<!pasta\s)(?<!pastas\s)(?<!diretório\s)(?<!diretórios\s)(?<!servidor\s)(?<!servidores\s)(?<!região\s)(?<!regiões\s)(?<!disco\s)(?<!discos\s)(?<!máquina\s)(?<!máquinas\s)(?<!local\s)(?<!locais\s)(?<!lugar\s)(?<!host\s)(?<!bucket\s)(?<!cluster\s)(?<!caminho\s)(?<!volume\s)(?<!zona\s)(?<!arquivo\s)(?<!arquivos\s)(?<!repositório\s)(?<!repositórios\s)(?<!ambiente\s)(?<!ambientes\s)(?<!página\s)(?<!páginas\s)(?<!tela\s)(?<!telas\s)(?<!tabela\s)(?<!tabelas\s)(?<!banco\s)(?<!bancos\s)(?<!namespace\s)(?<!namespaces\s)(?<!nó\s)(?<!nós\s)(?<!contêiner\s)(?<!contêineres\s)(?<!rede\s)(?<!redes\s)onde(?![\p{L}-])(?![^.!?\n]*\?)'

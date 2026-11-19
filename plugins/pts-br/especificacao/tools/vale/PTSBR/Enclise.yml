@@ -1,0 +1,11 @@
+# R3.7 (Seção 3) — pronome oblíquo átono com hífen (ênclise) e mesóclise.
+# Exemplos: "cole-o", "instalá-lo", "enviar-lhe-á". A forma "-se" fica com
+# PassivaSintetica.yml (R3.4).
+extends: existence
+message: "R3.7: pronome átono em '%s'. Repita o substantivo."
+level: warning
+ignorecase: true
+nonword: true
+tokens:
+  - '(?<![\p{L}-])\p{L}+-(?:o|a|os|as|lo|la|los|las|no|na|nos|nas|lhe|lhes|me|te)(?:-(?:á|ão|ei|emos|ia|iam))?(?![\p{L}-])'
+  - '(?<![\p{L}-])\p{L}+-se-(?:á|ão|ia|iam)(?![\p{L}-])'

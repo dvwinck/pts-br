@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "pts-br",
+  "description": "Plugins do PTS-BR — Português Técnico Simplificado: escrever, revisar e adotar textos técnicos em linguagem controlada para o português do Brasil.",
+  "owner": {
+    "name": "dvwinck"
+  },
+  "plugins": [
+    {
+      "name": "pts-br",
+      "source": "./plugins/pts-br",
+      "description": "Escreva e revise documentação técnica em PTS-BR (regras de escrita, dicionário controlado e linter) e ative o padrão PTS-BR no Claude Code.",
+      "category": "documentation",
+      "tags": ["pt-br", "linguagem-controlada", "documentacao", "technical-writing", "ste100"]
+    }
+  ]
+}

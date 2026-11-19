@@ -1,0 +1,11 @@
+# R3.6 (Seção 3) — gerundismo ("vamos estar enviando") e gerúndio encadeado.
+# O segundo padrão exige 3 letras antes de "-ando/-endo/-indo" para não
+# encontrar "quando". Ele pode encontrar "comando". Por isso o nível é warning.
+extends: existence
+message: "R3.6: gerundismo ou gerúndio encadeado em '%s'. Use o presente, o pretérito perfeito ou 'vai' + infinitivo."
+level: warning
+ignorecase: true
+nonword: true
+tokens:
+  - '(?<![\p{L}-])(?:vou|vai|vamos|vão|irei|irá|iremos|irão|pode|podem|deve|devem|precisa|precisam)\s+(?:estar|ficar)\s+\p{L}+[aeio]ndo(?![\p{L}-])'
+  - '(?<![\p{L}-])(?!(?:quando|comando|comandos)(?![\p{L}-]))\p{L}{3,}[aei]ndo,?\s+(?:e\s+)?(?!(?:quando|comando)(?![\p{L}-]))\p{L}{3,}[aei]ndo(?![\p{L}-])'

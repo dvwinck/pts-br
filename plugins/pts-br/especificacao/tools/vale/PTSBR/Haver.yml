@@ -1,0 +1,10 @@
+# R4.3 (Seção 4) — não use "haver". O 03-dicionario.md também marca "haver" como não aprovada (R1.1).
+# Use TER ou EXISTIR: "Há 3 erros." -> "O log tem 3 erros." ou "Existem 3 erros no log."
+# O gerador de PalavrasNaoAprovadas.yml não repete "haver".
+extends: existence
+message: "R4.3: '%s' (verbo 'haver') não é aprovado. Use 'ter' ou 'existir'."
+level: warning
+ignorecase: true
+nonword: true
+tokens:
+  - '(?<![\p{L}-])(?:há|houve|houveram|havia|haviam|haverá|haverão|haveria|haja|hajam|houver|houverem|havendo|havido|hão)(?![\p{L}-])'

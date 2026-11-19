@@ -3,7 +3,8 @@
 
 Os arquivos da especificação não mudam. Na cópia para o site:
 - a barra de navegação em texto (<!-- nav -->) sai, porque o site tem menu próprio;
-- os links para README.md apontam para a página inicial do site (index.md);
+- os links para README.md apontam para a página inicial do site (index.md), e os links para a
+  pasta plugins/ apontam para o GitHub;
 - o README.md também vira a página leia-me.md;
 - as 6 partes escondem a navegação lateral (o menu de abas já mostra as partes);
 - os títulos das regras do 02 perdem a marca `[vale]`/`[revisor]` no texto e ganham o
@@ -20,6 +21,8 @@ DEST = RAIZ / "_build" / "docs"
 
 NAV = re.compile(r"(?:\n---\n)?\n<!-- nav -->\n[^\n]*\n?")
 README_LINK = re.compile(r"\]\(README\.md(#[^)]*)?\)")
+PLUGIN_LINK = re.compile(r"\]\(plugins/([^)]*)\)")
+REPO = "https://github.com/dvwinck/pts-br/blob/main/plugins/"
 REGRA = re.compile(r"^(### (R\d+\.\d+ .*?)) `\[(vale|revisor)\]`\s*$", re.M)
 
 
@@ -111,6 +114,7 @@ def preparar(texto, nome):
     texto = NAV.sub("\n", texto)
     texto = recuar_listas(texto)
     texto = README_LINK.sub(lambda m: f"](index.md{m.group(1) or ''})", texto)
+    texto = PLUGIN_LINK.sub(lambda m: f"]({REPO}{m.group(1)})", texto)
     if nome == "02-regras.md":
         texto = REGRA.sub(regra, texto)
     if re.match(r"0[1-6]-", nome):

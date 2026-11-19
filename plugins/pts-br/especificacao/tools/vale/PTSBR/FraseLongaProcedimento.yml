@@ -1,0 +1,8 @@
+# R4.2 (Seção 4) — frase de passo de procedimento com mais de 20 palavras.
+# Ative esta regra nas pastas de procedimentos e runbooks (ver .vale.ini).
+extends: occurrence
+message: "R4.2: frase de procedimento com mais de 20 palavras. Divida o passo ou mova a explicação para uma nota."
+level: warning
+scope: sentence
+max: 20
+token: '[\p{L}\p{N}][\p{L}\p{N}_./-]*'

@@ -1,0 +1,3 @@
+# Nomes próprios e termos que contêm uma palavra não aprovada.
+# Um termo por linha. O gerador cria exceções para estes termos.
+Time Machine

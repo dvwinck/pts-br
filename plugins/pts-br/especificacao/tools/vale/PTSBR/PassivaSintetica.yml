@@ -1,0 +1,11 @@
+# R3.4 (Seção 3) — passiva sintética com "se" (ênclise): "Instala-se", "verificam-se".
+# A forma proclítica ("não se recomenda") fica para o revisor.
+# O padrão da 1ª conjugação também encontra imperativos com pronome ("mantenha-se").
+# A regra R3.7 também não aprova estes pronomes.
+extends: existence
+message: "R3.4: passiva com 'se' em '%s'. Escreva na voz ativa ou no imperativo."
+level: warning
+ignorecase: true
+nonword: true
+tokens:
+  - '(?<![\p{L}-])\p{L}+[aeiô]m?-se(?![\p{L}-])'

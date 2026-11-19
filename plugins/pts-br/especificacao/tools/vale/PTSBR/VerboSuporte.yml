@@ -1,0 +1,13 @@
+# R3.5 (Seção 3) — verbo-suporte + substantivo derivado de verbo: "realize a instalação".
+# O lookahead negativo exclui substantivos em "-ção" e "-são" que não nomeiam a ação do
+# verbo principal: permissão, versão, sessão, ação, função, opção, condição, seção, solução,
+# e substantivos em "-agem" e "-mento" que não derivam de um verbo da frase: mensagem, imagem,
+# documento, argumento, elemento, segmento, instrumento, procedimento, momento, equipamento.
+extends: existence
+message: "R3.5: verbo-suporte em '%s'. Use o verbo principal ('realize a instalação' -> 'instale')."
+level: warning
+ignorecase: true
+nonword: true
+tokens:
+  - '(?<![\p{L}-])(?:realiz|efetu|proced|promov)\p{L}*\s+(?:a|o|à|ao|as|os|uma|um)\s+(?!(?:permiss|vers|sess|extens|express|dimens|divis|tens|aç|funç|opç|condiç|seç|soluç|contraç|mensag|imag|document|argument|element|segment|instrument|procediment|moment|equipament|pagament)\p{L}*)\p{L}+(?:ção|ções|são|sões|mento|mentos|agem|agens)(?![\p{L}-])'
+  - '(?<![\p{L}-])(?:faz|fazer|faça|façam|fazem|fez|dar|dê|deem|dá|dão)\s+(?:a|o|as|os|uma|um)\s+(?!(?:permiss|vers|sess|extens|express|dimens|divis|tens|aç|funç|opç|condiç|seç|soluç|contraç|mensag|imag|document|argument|element|segment|instrument|procediment|moment|equipament|pagament)\p{L}*)\p{L}+(?:ção|ções|são|sões|mento|mentos|agem|agens)(?![\p{L}-])'

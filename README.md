@@ -143,6 +143,25 @@ têm resultado com o Vale. O teste das regras com o Vale é um critério de entr
 ([`05-governanca.md`](05-governanca.md), seções 3.2 e 6.6). A lista branca verifica a forma das palavras, não o
 significado: o revisor verifica o significado.
 
+## Plugin para o Claude Code
+
+O repositório publica o plugin `pts-br` para o Claude Code. Para instalar o plugin, execute estes
+comandos no Claude Code:
+
+```text
+/plugin marketplace add dvwinck/pts-br
+/plugin install pts-br@pts-br
+```
+
+O plugin tem estes componentes:
+
+- `/pts-br:escrever`: escreve ou reescreve um texto técnico em PTS-BR.
+- `/pts-br:revisar`: avalia um texto, classifica os desvios e mostra o resultado da revisão.
+- `/pts-br:adotar`: ativa o PTS-BR nas respostas do Claude Code até o fim da sessão.
+- `/output-style` com a opção **PTS-BR**: ativa o PTS-BR em todas as sessões do Claude Code.
+
+O arquivo [`plugins/pts-br/README.md`](plugins/pts-br/README.md) descreve o plugin.
+
 ## Versão
 
 - Versão da especificação: **1.0.0** (2026-11-18). Um documento declara apenas
