@@ -1731,4 +1731,4 @@ Contexto: 3 comunicados do incidente do exemplo 9 na página de status da loja. 
 [Início](README.md) · [01 Introdução](01-introducao.md) · [02 Regras](02-regras.md) · [03 Dicionário](03-dicionario.md) · [04 Termos técnicos](04-termos-tecnicos.md) · [05 Governança](05-governanca.md) · **06 Exemplos** · [Versões](CHANGELOG.md)
 
 <!-- rodape -->
-Feito com <3 em Joinville. 100% [PornCode](https://medium.com/@diogo.winck/manifesto-do-porn-coding-64c55df3e3eb). Nenhum direito reservado.
+Feito com ❤️ em Joinville. 100% [PornCode](https://medium.com/@diogo.winck/manifesto-do-porn-coding-64c55df3e3eb). Nenhum direito reservado.
