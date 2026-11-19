@@ -622,6 +622,7 @@ def tech_lexicon():
     return words
 
 
+RODAPE = "Feito com <3 em Joinville. 100% [PornCode](https://medium.com/@diogo.winck/manifesto-do-porn-coding-64c55df3e3eb). Nenhum direito reservado."
 NAV = "[Início](README.md) · [01 Introdução](01-introducao.md) · [02 Regras](02-regras.md) · **03 Dicionário** · [04 Termos técnicos](04-termos-tecnicos.md) · [05 Governança](05-governanca.md) · [06 Exemplos](06-exemplos.md) · [Versões](CHANGELOG.md)"
 
 
@@ -650,7 +651,7 @@ def render(rows, nA, nN, nO):
         f"| {c} | {cls.get(c,0)} | {clsO.get(c,0)} | {clsN.get(c,0)} |" for c in order + ["loc", "abrev"]) + f"\n| **Total** | **{nA}** | **{nO}** | **{nN}** |"
     intro = (intro.replace("{{NA}}", str(nA)).replace("{{NN}}", str(nN)).replace("{{NO}}", str(nO))
              .replace("{{LETRAS}}", letters).replace("{{TABELA_CLASSES}}", tbl))
-    pathlib.Path(sys.argv[sys.argv.index("--render") + 1]).write_text(intro + "\n" + "\n".join(out).rstrip("\n") + "\n\n---\n\n<!-- nav -->\n" + NAV + "\n", encoding="utf-8")
+    pathlib.Path(sys.argv[sys.argv.index("--render") + 1]).write_text(intro + "\n" + "\n".join(out).rstrip("\n") + "\n\n---\n\n<!-- nav -->\n" + NAV + "\n\n<!-- rodape -->\n" + RODAPE + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

@@ -6,7 +6,10 @@ repo_name: dvwinck/pts-br
 edit_uri: edit/main/
 docs_dir: _build/docs
 site_dir: site
-copyright: Texto sob a licença CC BY 4.0. Não é uma tradução oficial do ASD-STE100 nem tem aprovação da ASD.
+copyright: >-
+  Texto sob a licença CC BY 4.0. Não é uma tradução oficial do ASD-STE100 nem tem aprovação da ASD.<br>
+  Feito com &lt;3 em Joinville. 100% <a href="https://medium.com/@diogo.winck/manifesto-do-porn-coding-64c55df3e3eb">PornCode</a>.
+  Nenhum direito reservado.
 
 theme:
   name: material
