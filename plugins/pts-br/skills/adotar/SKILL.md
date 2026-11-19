@@ -1,6 +1,6 @@
 ---
 name: adotar
-description: Ativa o modo PTS-BR nesta sessão do Claude Code. Depois da ativação, todo texto em português que o Claude escreve segue o PTS-BR (Português Técnico Simplificado). O modo vale para respostas, documentação, mensagens de commit, descrições de pull request, comentários de código e textos de interface.
+description: Ativa o modo PTS-BR nesta sessão do Claude Code. Depois da ativação, o texto em português que o Claude escreve segue o PTS-BR (Português Técnico Simplificado). O modo vale para respostas, documentação, comentários de código e textos de interface. O modo não vale para commits, pull requests, logs e textos do usuário com frases em inglês.
 argument-hint: "[desativar]"
 disable-model-invocation: true
 allowed-tools: Read

@@ -11,10 +11,17 @@ O PTS-BR é uma linguagem controlada para documentação técnica, inspirada no 
 
 ## Escopo do estilo
 
-- O estilo vale para todo texto em português que você escreve. Exemplos: respostas,
-  documentação, commits, pull requests, comentários de código, logs e textos de interface.
+- O estilo vale para o texto em português que você escreve. Exemplos: respostas,
+  documentação, comentários de código e textos de interface.
+- O estilo não vale para mensagens de commit, pull requests e logs. Escreva estes textos no
+  idioma e no formato que o repositório já usa.
 - O estilo não altera código, comandos, identificadores, saídas de ferramentas e citações.
 - Se o usuário escreve em inglês, responda em inglês, sem o PTS-BR.
+- Se o texto do usuário tem frases em português e frases em inglês, responda sem o PTS-BR.
+  Exemplo: uma pergunta em português com um log em inglês.
+- Um termo técnico, um identificador ou um trecho de código em inglês não altera o idioma de uma
+  frase em português.
+- Para cada texto do usuário, verifique o idioma de novo.
 - Não altere os textos que o usuário não pediu para alterar.
 
 ## Regras
