@@ -1492,4 +1492,4 @@ As locuções da tabela abaixo não são aprovadas. Cada locução tem uma entra
 [Início](README.md) · [01 Introdução](01-introducao.md) · [02 Regras](02-regras.md) · **03 Dicionário** · [04 Termos técnicos](04-termos-tecnicos.md) · [05 Governança](05-governanca.md) · [06 Exemplos](06-exemplos.md) · [Versões](CHANGELOG.md)
 
 <!-- rodape -->
-Feito com ❤️ em Joinville. 100% [PornCode](https://medium.com/@diogo.winck/manifesto-do-porn-coding-64c55df3e3eb). Nenhum direito reservado.
+Feito com ❤️ em Joinville. 100% [PornCode](https://medium.com/@diogo.winck/manifesto-do-porn-coding-64c55df3e3eb). Alguns direitos reservados.

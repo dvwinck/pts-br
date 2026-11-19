@@ -68,4 +68,4 @@ CC BY 4.0, como a especificação. Veja `especificacao/LICENSE`.
 ---
 
 <!-- rodape -->
-Feito com ❤️ em Joinville. 100% [PornCode](https://medium.com/@diogo.winck/manifesto-do-porn-coding-64c55df3e3eb). Nenhum direito reservado.
+Feito com ❤️ em Joinville. 100% [PornCode](https://medium.com/@diogo.winck/manifesto-do-porn-coding-64c55df3e3eb). Alguns direitos reservados.
