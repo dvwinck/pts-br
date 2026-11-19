@@ -17,6 +17,7 @@ theme:
   language: pt-BR
   font: false
   features:
+    - announce.dismiss
     - navigation.tabs
     - navigation.sections
     - navigation.top
