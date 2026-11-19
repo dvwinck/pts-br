@@ -3,6 +3,8 @@
 
 Os arquivos da especificação não mudam. Na cópia para o site:
 - a barra de navegação em texto (<!-- nav -->) sai, porque o site tem menu próprio;
+- o rodapé em texto (<!-- rodape -->) sai, porque o rodapé do site (copyright do mkdocs.yml)
+  mostra o mesmo texto em todas as páginas;
 - os links para README.md apontam para a página inicial do site (index.md), e os links para a
   pasta plugins/ apontam para o GitHub;
 - o README.md também vira a página leia-me.md;
@@ -20,6 +22,7 @@ SRC = RAIZ / "site-src"
 DEST = RAIZ / "_build" / "docs"
 
 NAV = re.compile(r"(?:\n---\n)?\n<!-- nav -->\n[^\n]*\n?")
+RODAPE = re.compile(r"\n<!-- rodape -->\n[^\n]*\n?")
 README_LINK = re.compile(r"\]\(README\.md(#[^)]*)?\)")
 PLUGIN_LINK = re.compile(r"\]\(plugins/([^)]*)\)")
 REPO = "https://github.com/dvwinck/pts-br/blob/main/plugins/"
@@ -111,6 +114,7 @@ def recuar_listas(texto):
 
 
 def preparar(texto, nome):
+    texto = RODAPE.sub("\n", texto)
     texto = NAV.sub("\n", texto)
     texto = recuar_listas(texto)
     texto = README_LINK.sub(lambda m: f"](index.md{m.group(1) or ''})", texto)

@@ -1893,3 +1893,6 @@ Os campos são iguais aos campos do comentário de resultado da seção 4.1, tam
 
 <!-- nav -->
 [Início](README.md) · [01 Introdução](01-introducao.md) · [02 Regras](02-regras.md) · [03 Dicionário](03-dicionario.md) · [04 Termos técnicos](04-termos-tecnicos.md) · **05 Governança** · [06 Exemplos](06-exemplos.md) · [Versões](CHANGELOG.md)
+
+<!-- rodape -->
+Feito com <3 em Joinville. 100% [PornCode](https://medium.com/@diogo.winck/manifesto-do-porn-coding-64c55df3e3eb). Nenhum direito reservado.
