@@ -1,7 +1,7 @@
 {
   "name": "pts-br",
   "displayName": "PTS-BR — Português Técnico Simplificado",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Escreva e revise documentação técnica em PTS-BR, a linguagem controlada para o português do Brasil inspirada no ASD-STE100. Inclui a especificação 1.0.0, o linter em Python e um estilo de saída que ativa o padrão no Claude Code.",
   "author": {
     "name": "dvwinck"

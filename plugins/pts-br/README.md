@@ -29,8 +29,8 @@ versão mais nova.
 |---|---|---|
 | Skill `escrever` | `/pts-br:escrever <assunto ou arquivo>` | Escreve ou reescreve um texto técnico em PTS-BR. O Claude consulta o dicionário e os modelos do 06. Antes da resposta, o Claude executa o linter. |
 | Skill `revisar` | `/pts-br:revisar <arquivo> [--fase piloto\|expansao\|padrao] [--corrigir]` | Avalia a conformidade de um texto. O Claude executa o linter, aplica a lista de verificação do revisor e classifica os desvios (S1, S2, S3). O resultado é Aprovado, Aprovado com exceções ou Reprovado. Com exceções aprovadas, o resultado depende da fase de adoção. |
-| Skill `adotar` | `/pts-br:adotar` (ou `/pts-br:adotar desativar`) | Ativa o PTS-BR em todo texto em português que o Claude escreve nesta sessão: respostas, documentação, commits, pull requests e comentários. |
-| Estilo de saída `PTS-BR` | `/output-style` e escolha **PTS-BR** | Ativa o PTS-BR em todas as sessões. O estilo mantém as instruções de engenharia de software do Claude Code. |
+| Skill `adotar` | `/pts-br:adotar` (ou `/pts-br:adotar desativar`) | Ativa o PTS-BR no texto em português que o Claude escreve nesta sessão: respostas, documentação, comentários de código e textos de interface. O PTS-BR não vale para commits, pull requests, logs e textos do usuário com frases em inglês. |
+| Estilo de saída `PTS-BR` | `/output-style` e escolha **PTS-BR** | Ativa o PTS-BR em todas as sessões, com o mesmo escopo da skill `adotar`. O estilo mantém as instruções de engenharia de software do Claude Code. |
 
 O Claude também usa as skills `escrever` e `revisar` sem o comando, quando o pedido fala de
 PTS-BR. A skill `adotar` funciona apenas com o comando.
@@ -60,6 +60,13 @@ estiver desatualizada.
   as regras `[revisor]` dependem da leitura do modelo, que pode errar. Para documentos de
   produção, mantenha a revisão humana de `05-governanca.md`, seção 4.
 - As regras desta versão ainda não têm resultado com o Vale. O linter em Python é a referência.
+
+## Versões
+
+| Versão | Data | Alterações |
+|---|---|---|
+| 2.0.0 | 2026-11-19 | O PTS-BR não vale mais para commits, pull requests e logs. O PTS-BR também não vale para textos do usuário com frases em português e em inglês. A especificação continua na versão 1.0.0. |
+| 1.0.0 | 2026-11-19 | Primeira versão do plugin, com a especificação 1.0.0. |
 
 ## Licença
 
