@@ -28,7 +28,7 @@ versão mais nova.
 | Item | Comando | Função |
 |---|---|---|
 | Skill `escrever` | `/pts-br:escrever <assunto ou arquivo>` | Escreve ou reescreve um texto técnico em PTS-BR. O Claude consulta o dicionário e os modelos do 06. Antes da resposta, o Claude executa o linter. |
-| Skill `revisar` | `/pts-br:revisar <arquivo> [--corrigir]` | Avalia a conformidade de um texto. O Claude executa o linter, aplica a lista de verificação do revisor e classifica os desvios (S1, S2, S3). O resultado é Aprovado, Aprovado com exceções ou Reprovado. |
+| Skill `revisar` | `/pts-br:revisar <arquivo> [--fase piloto\|expansao\|padrao] [--corrigir]` | Avalia a conformidade de um texto. O Claude executa o linter, aplica a lista de verificação do revisor e classifica os desvios (S1, S2, S3). O resultado é Aprovado, Aprovado com exceções ou Reprovado. Com exceções aprovadas, o resultado depende da fase de adoção. |
 | Skill `adotar` | `/pts-br:adotar` (ou `/pts-br:adotar desativar`) | Ativa o PTS-BR em todo texto em português que o Claude escreve nesta sessão: respostas, documentação, commits, pull requests e comentários. |
 | Estilo de saída `PTS-BR` | `/output-style` e escolha **PTS-BR** | Ativa o PTS-BR em todas as sessões. O estilo mantém as instruções de engenharia de software do Claude Code. |
 

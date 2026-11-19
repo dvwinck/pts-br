@@ -1,7 +1,7 @@
 ---
 name: revisar
-description: Revisa um texto técnico em português e avalia se o texto está de acordo com o PTS-BR (Português Técnico Simplificado). Executa o linter, aplica a lista de verificação do revisor, classifica cada desvio por severidade (S1, S2, S3) e mostra o resultado Aprovado, Aprovado com exceções ou Reprovado. Use quando o pedido for revisar, avaliar, auditar ou verificar a conformidade de um documento, runbook, procedimento, README ou arquivo de mensagens com o PTS-BR.
-argument-hint: "<arquivo, pasta ou texto> [--corrigir]"
+description: Revisa um texto técnico em português e avalia se o texto está de acordo com o PTS-BR (Português Técnico Simplificado). Use quando o pedido for revisar, avaliar, auditar ou verificar a conformidade de um documento, runbook, procedimento, README ou arquivo de mensagens com o PTS-BR. Use também quando o pedido citar "PTS-BR", "português técnico simplificado" ou "linguagem controlada" para um texto que já existe.
+argument-hint: "<arquivo, pasta ou texto> [--fase piloto|expansao|padrao] [--corrigir]"
 allowed-tools: Read, Grep, Glob, Write, Bash(python3 ${CLAUDE_PLUGIN_ROOT}/especificacao/tools/check_spec.py *)
 ---
 
@@ -44,7 +44,8 @@ relatório. Altere o arquivo apenas se o usuário pedir esta alteração.
 4. Confirme cada alerta do linter. Um alerta pode ser um falso positivo, por exemplo uma palavra
    num nome próprio ou num literal. As outras palavras fora da lista branca são desvios de
    R1.1. Exceções: nomes próprios, literais e termos do glossário do projeto.
-5. Aplique as regras `[revisor]` do guia, seção por seção. Verifique com atenção:
+5. Aplique as regras da seção 3 do guia, seção por seção. O linter verifica apenas uma parte das
+   regras com a marca `[vale]`. Leia o texto para todas as regras. Verifique com atenção:
    - o significado de cada palavra (R1.2), com o Grep no dicionário para as palavras com dúvida;
    - a ordem e o conteúdo dos passos (R5.1 a R5.13);
    - o nível, a posição e a ordem de cada aviso (R7.1 a R7.9);
@@ -54,7 +55,7 @@ relatório. Altere o arquivo apenas se o usuário pedir esta alteração.
 
    | Nível | Definição | Exemplos |
    |---|---|---|
-   | S1 Crítico | O desvio causa uma ação incorreta, dano, perda de dados ou incidente quando o leitor segue o texto. | Aviso depois do passo perigoso. Passos fora de ordem. Instrução com 2 significados. Decisão sem uma das saídas. |
+   | S1 Crítico | O desvio causa uma ação incorreta, dano, perda de dados ou incidente quando o leitor segue o texto. | Aviso depois do passo perigoso. Passos fora de ordem. Instrução com 2 significados. Palavra com 2 significados num passo de exclusão. Decisão sem uma das saídas. |
    | S2 Maior | O desvio não cumpre uma regra, e o leitor entende o texto com mais esforço. | Frase maior que o limite. Passiva com "se". Cadeia de 4 substantivos. Palavra não aprovada. Infinitivo como ordem. Documento sem a versão declarada. |
    | S3 Menor | O desvio é de forma, e o leitor entende o texto sem esforço a mais. | Lista não numerada para passos curtos. Comando sem formato de código. Sigla sem a forma completa. |
 
@@ -68,20 +69,33 @@ relatório. Altere o arquivo apenas se o usuário pedir esta alteração.
      Um S1 nunca tem exceção. Um desvio num aviso de segurança também nunca tem exceção.
    - S3: `REGISTRADO`.
    - Exceção que o usuário informa como aprovada pelo aprovador: `EXCECAO`.
-8. Escolha o resultado pela seção 4.4 do 05:
+8. Se 1 desvio S2 ou mais tem o estado `EXCECAO`, calcule o limite de exceções:
+   - A fase de adoção vem da opção `--fase` ou da mensagem do usuário.
+   - Limite = palavras do registro `[METRICAS]` × limite da fase ÷ 1 000. O limite da fase é 5 no
+     Piloto, 3 na Expansão e 1,5 no Padrão.
+   - Se o limite tiver uma parte depois da vírgula, use o próximo número sem vírgula. Exemplo:
+     400 palavras na Expansão: 400 × 3 ÷ 1 000 = 1,2. O limite é 2.
+   - Se o usuário não informou a fase, calcule o resultado para as 3 fases. Se o resultado é igual
+     nas 3 fases, use este resultado. Se o resultado é diferente, escreva
+     `Pendente: informe a fase` no campo **Resultado** e o resultado de cada fase na linha de baixo.
+9. Escolha o resultado pela seção 4.4 do 05. Cada documento cumpre as condições de 1 resultado
+   apenas:
 
-   | Resultado | Condições |
+   | Resultado | Condições (todas verdadeiras) |
    |---|---|
-   | Reprovado | 1 S1 ou mais com o estado `ABERTO`. Ou 1 S2 ou mais com o estado `ABERTO` ou `EXCECAO-PEDIDA`. Ou o documento não declara a versão. |
-   | Aprovado com exceções | Nenhum S1 aberto. Os S2 restantes têm o estado `EXCECAO`. O número de exceções está dentro do limite da fase: 5 por 1 000 palavras no Piloto, 3 na Expansão e 1,5 no Padrão. |
-   | Aprovado | Nenhum S1 aberto e nenhum S2 aberto. Desvios S3 não bloqueiam a publicação. |
+   | Aprovado | Nenhum S1 com o estado `ABERTO`. Nenhum S2 com o estado `ABERTO`, `EXCECAO-PEDIDA` ou `EXCECAO`. O documento declara a versão (CK-0.1). |
+   | Aprovado com exceções | Nenhum S1 com o estado `ABERTO`. Nenhum S2 com o estado `ABERTO` ou `EXCECAO-PEDIDA`. 1 S2 ou mais com o estado `EXCECAO`. O número de exceções não é maior que o limite do passo 8. Nenhuma exceção está num aviso de segurança. O documento declara a versão (CK-0.1). |
+   | Reprovado | 1 destas condições: 1 S1 ou mais com o estado `ABERTO`. 1 S2 ou mais com o estado `ABERTO` ou `EXCECAO-PEDIDA`. O número de exceções é maior que o limite do passo 8. 1 exceção num aviso de segurança. O documento não declara a versão (CK-0.1). |
+
+   Desvios S3 não alteram o resultado.
 
 ## Relatório
 
 ```markdown
 # Revisão PTS-BR: <arquivo>
 
-**Resultado:** <Aprovado | Aprovado com exceções | Reprovado>
+**Resultado:** <Aprovado | Aprovado com exceções | Reprovado | Pendente: informe a fase>
+**Fase e limite de exceções:** <fase: N exceções de no máximo L, ou "sem exceções">
 **Versão declarada (CK-0.1):** <sim | não>
 **Tamanho:** <N> palavras · **Desvios:** <a> S1, <b> S2, <c> S3 · **Alertas do linter:** <n> (<f> falsos positivos)
 
