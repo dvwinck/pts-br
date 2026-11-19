@@ -1,0 +1,390 @@
+A|MAIOR|adj|Com mais tamanho, mais quantidade ou mais valor que outro item.|Use um valor maior que 0.|—
+A|MAIORIA|s|A parte maior de um grupo.|A maioria dos erros acontece no módulo de pagamento.|—
+A|MAIS|adv|Em quantidade ou em nível maior.|Adicione mais memória ao nó.|—
+N|mandar|v|ENVIAR (v)|Envie o log para o suporte.|Mande o log para o suporte.
+A|MANTER|v|Fazer algo continuar no mesmo estado ou no mesmo lugar.|Mantenha o servidor ligado durante a cópia.|—
+N|manipular|v|ALTERAR (v); USAR (v)|Não altere o arquivo `package-lock.json`.|Não manipule o arquivo `package-lock.json`.
+A|MANUAL|adj|Que uma pessoa faz, sem automação.|A aprovação é manual.|—
+A|MANUALMENTE|adv|Por uma pessoa, sem automação.|Execute o script manualmente.|—
+A|MANUTENÇÃO|s|Trabalho que mantém um sistema funcionando corretamente.|Ative o modo de manutenção antes da migração.|—
+A|MARCAR|v|Colocar um sinal em um item para identificar o item.|Marque o chamado como resolvido.|—
+A|MAS|conj|Indica uma diferença ou um limite ao texto anterior.|O serviço inicia, mas não responde na porta 80.|—
+N|matar|v|PARAR (v)|Pare o processo com o comando `kill`.|Mate o processo.
+A|MÁXIMO|adj|O maior valor permitido ou possível.|O tamanho máximo do arquivo é 10 MB.|—
+A|MEDIDA|s|Valor que você obtém quando mede algo.|Registre a medida de latência antes da alteração.|—
+N|mediante|prep|COM (prep); DEPOIS DE (prep)|Acesse o sistema com o token. / Execute o deploy depois da aprovação.|Acesse o sistema mediante token. / Execute o deploy mediante aprovação.
+A|MEDIR|v|Obter um valor, por exemplo um tempo ou um tamanho, com uma ferramenta.|Meça o tempo de resposta da API.|—
+A|MELHORAR|v|Fazer algo ficar melhor.|Esta versão melhora o desempenho do login.|—
+N|mencionado|adj|ESTE (pron)|Execute este comando.|Execute o comando mencionado.
+A|MENOR|adj|Com menos tamanho, menos quantidade ou menos valor que outro item.|Use um valor menor que 1000.|—
+A|MENOS|adv|Em quantidade ou em nível menor.|O índice novo usa menos memória.|—
+A|MENSAGEM|s|Texto que um sistema ou uma pessoa envia ou mostra.|A mensagem de erro mostra o código 500.|—
+A|MÊS|s|Cada um dos 12 períodos de um ano.|O sistema gera o relatório de custo 1 vez por mês.|—
+A|MESMO|adj|Que não é diferente de outro item.|Use a mesma versão em todos os nós.|Abra o arquivo e altere o mesmo. (Use: Abra o arquivo e altere o arquivo.)
+N|mesmo que|loc|MAS (conj); SE (conj)|O teste falhou, mas o pipeline continuou.|Mesmo que o teste falhe, o pipeline continua.
+A|METADE|s|Uma de 2 partes iguais.|O cluster tem 2 nós. Quando 1 nó falha, o cluster perde metade da capacidade.|—
+N|mexer|v|ALTERAR (v)|Não altere a configuração do proxy.|Não mexa na configuração do proxy.
+A|MÍNIMO|adj|O menor valor permitido ou possível.|O valor mínimo é 1.|—
+A|MINUTO|s|Período de 60 s. Símbolo depois de um número: min.|O agendador executa o job a cada minuto.|Aguarde 5 minutos. (Use: Aguarde 5 min.)
+N|mitigar|v|DIMINUIR (v)|Aplique o patch para diminuir o risco.|Aplique o patch para mitigar o risco.
+A|MODELO|s|Estrutura padrão que você usa para criar itens iguais.|Use o modelo de runbook da equipe.|—
+N|modificar|v|ALTERAR (v)|Altere o arquivo de configuração.|Modifique o arquivo de configuração.
+A|MODO|s|Estado de funcionamento que um usuário ou uma configuração escolhe para um sistema.|O agente tem 2 modos: local e remoto.|—
+A|MOMENTO|s|Ponto específico no tempo.|Você pode cancelar a operação a qualquer momento.|—
+A|MONITORAMENTO|s|Ação de monitorar um sistema, sem parar, para encontrar alterações ou problemas.|O monitoramento mostra o consumo de CPU de cada nó.|—
+A|MONITORAR|v|Ver os dados de um sistema durante um tempo para encontrar alterações ou problemas.|Monitore o consumo de CPU por 10 min.|—
+A|MOSTRAR|v|Fazer algo ficar visível para uma pessoa.|A tela mostra o estado da cópia.|—
+N|motivo|s|CAUSA (s)|Descreva a causa da falha.|Descreva o motivo da falha.
+A|MOVER|v|Fazer um item ir de um lugar para outro. O item não está mais no lugar original.|Mova o log para `/var/archive`.|—
+N|mudar|v|ALTERAR (v); MOVER (v)|Altere a porta para 8080. / Mova o arquivo para outra pasta.|Mude a porta para 8080. / Mude o arquivo de pasta.
+N|muito|adv|— dê o valor exato; MAIS (adv)|A consulta demora 30 s.|A consulta demora muito.
+A|NÃO|adv|Indica negação.|Não desligue o servidor.|—
+N|não obstante|loc|MAS (conj)|A migração terminou, mas 3 tabelas têm erros.|Não obstante a migração ter terminado, 3 tabelas têm erros.
+A|NECESSÁRIO|adj|Que precisa existir ou acontecer para obter um resultado.|Instale as dependências necessárias.|—
+N|necessariamente|adv|DEVER (v) — ou remova|O nome deve começar com uma letra.|O nome necessariamente começa com uma letra.
+A|NECESSIDADE|s|O que uma pessoa ou um sistema precisa.|Descreva a necessidade do cliente no chamado.|—
+N|necessitar|v|PRECISAR (v)|O build precisa do Node.js 20.|O build necessita do Node.js 20.
+A|NEM|conj|E também não.|Não pare nem reinicie o banco durante o backup.|—
+A|NENHUM|pron|Nem um único item.|Nenhum teste falhou.|—
+A|NÍVEL|s|Posição em uma escala.|Defina o nível de log como `INFO`.|—
+N|no entanto|loc|MAS (conj)|O serviço respondeu, mas a latência aumentou.|O serviço respondeu. No entanto, a latência aumentou.
+N|no que diz respeito a|loc|SOBRE (prep)|Esta seção tem as regras sobre senhas.|No que diz respeito a senhas, esta seção tem as regras.
+N|no que tange a|loc|SOBRE (prep)|Leia a política sobre retenção de dados.|Leia a política no que tange à retenção de dados.
+N|no sentido de|loc|PARA (prep)|A equipe analisa o log para corrigir o defeito.|A equipe trabalha no sentido de corrigir o defeito.
+A|NOME|s|Palavra ou conjunto de caracteres que identifica um item.|Digite o nome do bucket.|—
+A|NORMA|s|Documento com regras obrigatórias.|O código segue a norma interna de segurança.|—
+A|NORMAL|adj|De acordo com o estado comum de um sistema.|O consumo de memória está normal: 60%.|—
+N|normalmente|adv|APROXIMADAMENTE (adv) — ou dê a frequência|O build demora aproximadamente 8 min.|Normalmente, o build demora 8 minutos.
+N|nós|pron|— escreva o sujeito real. Nota: "nós", plural do nome técnico "nó" (04-termos-tecnicos.md, NT-12), é permitido depois de um artigo, de uma contração ou de um número (regra D11).|A equipe de segurança recomenda a versão 2.4.|Nós recomendamos a versão LTS.
+A|NOTA|s|Palavra de sinalização de uma informação a mais, que não é um aviso. Use apenas da forma que 02-regras.md, seção 7, define.|**NOTA:** O comando não altera os dados.|—
+N|notificar|v|INFORMAR (v); ENVIAR (v)|O sistema envia um e-mail ao responsável.|O sistema notifica o responsável.
+N|novamente|adv|DE NOVO (adv)|Execute o teste de novo.|Execute o teste novamente.
+A|NOVO|adj|Que começa a existir, a funcionar ou a ser usado depois de outro item ou depois de um evento. Não use para comparar um item com a data do texto (02-regras.md, R9.4).|Crie um token novo. / O Python 3.12 é mais novo que o Python 3.9.|A nova versão corrige o defeito. (Use: A versão 2.4 corrige o defeito.)
+A|NÚMERO|s|Valor que indica uma quantidade ou uma posição.|Informe o número da versão.|—
+A|NUNCA|adv|Em nenhum momento.|Nunca armazene senhas em texto simples.|—
+A|O|art|Artigo definido masculino. Indica um item conhecido ou que o texto já indicou.|Abra o terminal.|Remova-o. (Use: Remova o arquivo.)
+N|o mesmo|pron|ESTE (pron) — ou repita o substantivo|Abra o arquivo. Altere a porta no arquivo.|Abra o arquivo e altere a porta no mesmo.
+N|o qual|pron|QUE (pron)|O servidor que recebe a requisição grava o log.|O servidor, o qual recebe a requisição, grava o log.
+N|o senhor|pron|VOCÊ (pron) — ou use o imperativo|Você pode cancelar a assinatura no portal.|O senhor pode cancelar a assinatura no portal.
+A|OBJETIVO|s|Resultado que uma ação ou um processo precisa obter.|O objetivo deste runbook é restaurar o serviço.|—
+N|objetivar|v|OBJETIVO (s)|O objetivo do script é limpar os logs antigos.|O script objetiva limpar os logs antigos.
+A|OBRIGATÓRIO|adj|Que você precisa fazer ou usar.|O campo **E-mail** é obrigatório.|—
+N|obrigatoriamente|adv|DEVER (v); OBRIGATÓRIO (adj)|O token deve estar no cabeçalho. / O cabeçalho `Authorization` é obrigatório.|O token obrigatoriamente vai no cabeçalho.
+A|OBSOLETO|adj|Que ainda existe, mas que não tem mais suporte e que você não deve usar.|A versão 1 da API é obsoleta. Use a versão 2.|—
+N|observação|s|NOTA (s)|**NOTA:** O limite se aplica a cada usuário.|Observação: o limite vale por usuário.
+N|observar|v|VER (v); ANALISAR (v) — para "Observe que", use NOTA|Veja a tabela 3. / Analise o gráfico de latência.|Observe a tabela 3. / Observe que o limite é diário.
+A|OBTER|v|Começar a ter algo.|Obtenha o token na página de configurações.|—
+A|OCULTAR|v|Fazer algo não estar visível.|Oculte as colunas sem dados.|—
+A|OCUPAR|v|Usar um espaço de memória ou de disco.|O índice ocupa 4 GB.|—
+N|ocorrer|v|ACONTECER (v)|O erro acontece às 03:00 UTC-03:00.|O erro ocorre às 03:00.
+A|ONDE|adv|Em que lugar (uma pasta, um servidor ou uma tela).|Escolha a pasta onde o instalador cria os arquivos.|Um cenário onde a rede falha. (Use: Um cenário em que a rede falha.)
+A|OPÇÃO|s|Um dos itens que o usuário pode escolher.|O comando tem 3 opções.|—
+A|OPCIONAL|adj|Que não é obrigatório.|Este passo é opcional.|—
+A|OPERAÇÃO|s|Ação que um sistema faz.|A operação de cópia demora 10 min.|—
+N|operacionalizar|v|FAZER (v) — ou verbo específico|Configure o processo de backup.|Operacionalize o processo de backup.
+N|operar|v|USAR (v); CONTROLAR (v)|Use o console para controlar o cluster.|Opere o cluster pelo console.
+A|ORDEM|s|Sequência em que itens ou ações acontecem.|Execute os scripts na ordem abaixo.|O gerente deu a ordem de parar o serviço. (Use: O gerente decidiu parar o serviço.)
+A|ORDENAR|v|Colocar itens em uma ordem definida.|Ordene a lista por data.|O gerente ordenou o rollback. (Use: O gerente decidiu reverter o deploy.)
+A|ORGANIZAR|v|Colocar itens em uma ordem ou em uma estrutura.|Organize os arquivos por projeto.|—
+A|ORIGEM|s|Lugar ou sistema em que um dado, uma requisição ou um item começa.|Verifique o endereço IP de origem.|—
+N|otimizar|v|MELHORAR (v)|Crie um índice para melhorar a consulta.|Crie um índice para otimizar a consulta.
+A|OU|conj|Indica uma alternativa entre itens.|Use o arquivo `.yaml` ou o arquivo `.json`.|—
+N|ou seja|loc|— divida a frase em 2 frases|O tempo limite é 30 s. Depois deste tempo, a aplicação cliente cancela a requisição.|O timeout é de 30 segundos, ou seja, a aplicação cliente desiste depois disso.
+A|OUTRO|pron|Diferente do item de que o texto fala.|Use outro nome de usuário.|—
+N|outrossim|adv|TAMBÉM (adv)|O script também atualiza o índice.|Outrossim, o script atualiza o índice.
+A|PADRÃO|s|Valor ou modelo que um sistema usa quando ninguém define outro.|O valor padrão é 30 s.|Siga o padrão da empresa. (Use: Siga a norma da empresa.)
+N|pane|s|FALHA (s)|Uma falha no roteador parou a rede.|Uma pane no roteador derrubou a rede.
+A|PARA|prep|Indica destino, objetivo ou limite de tempo.|Envie o log para o suporte.|—
+N|para que|loc|PARA (prep)|Reinicie o serviço para aplicar a alteração.|Reinicie o serviço para que a alteração seja aplicada.
+N|parametrizar|v|CONFIGURAR (v)|Configure o job com as variáveis de ambiente.|Parametrize o job com as variáveis de ambiente.
+A|PARAR|v|Fazer um processo, um serviço ou um equipamento não funcionar mais.|Pare o serviço antes do backup.|—
+A|PARCIAL|adj|Que tem apenas uma parte.|O backup parcial tem apenas o banco de usuários.|—
+N|parcialmente|adv|PARCIAL (adj)|O deploy teve um resultado parcial: 2 de 3 nós.|O deploy funcionou parcialmente.
+A|PARTE|s|Um dos itens menores que, juntos, são um item completo.|A primeira parte do guia descreve a instalação.|—
+A|PASSO|s|Uma instrução numerada de um procedimento.|Repita o passo 3.|—
+A|PAUSAR|v|Parar uma operação por um tempo, com a possibilidade de continuar depois.|Pause a sincronização.|—
+A|PEDIDO|s|Mensagem em que uma pessoa pede algo a outra pessoa, a uma equipe ou a um sistema, por exemplo uma compra. Para um pedido de suporte ou de acesso em um sistema de chamados, use o nome técnico "chamado" (04-termos-tecnicos.md, NT-20).|Cada pedido de compra tem um número.|O pedido de acesso precisa da aprovação do gestor. (Use: O chamado de acesso precisa da aprovação do gestor.)
+A|PEDIR|v|Informar a uma pessoa ou a um sistema que você precisa de algo.|Peça acesso ao administrador.|—
+N|pegar|v|OBTER (v); COPIAR (v)|Obtenha o token no portal.|Pegue o token no portal.
+A|PENDENTE|adj|Que ainda não terminou ou que ainda não tem resposta.|O pedido está pendente.|—
+A|PERDA|s|Condição de não ter mais algo.|Este comando causa a perda dos dados da tabela `sessoes`.|—
+A|PERDER|v|Não ter mais algo.|Se você fechar o editor, você perde as alterações que não salvou.|—
+A|PERIGO|s|Palavra de sinalização de aviso. Use apenas da forma que 02-regras.md, seção 7, define.|**PERIGO:** Não escreva a senha do banco de produção no chamado. Todas as pessoas com acesso ao chamado podem ler a senha e acessar os dados dos clientes.|Perigo de lentidão no sistema. (Use: **CUIDADO:** e a consequência com o valor.)
+A|PERIGOSO|adj|Que tem risco de dano ou de perda.|Não execute comandos perigosos em produção sem aprovação.|—
+A|PERÍODO|s|Tempo entre 2 momentos.|Escolha o período do relatório.|—
+A|PERMANENTE|adj|Que continua a existir sem limite de tempo.|A exclusão é permanente.|—
+N|permanecer|v|CONTINUAR (v); ESTAR (v)|O serviço continua ativo.|O serviço permanece ativo.
+A|PERMISSÃO|s|Direito de acessar ou de alterar um item.|O usuário não tem permissão de escrita.|—
+A|PERMITIR|v|Dar a possibilidade ou o direito de fazer algo.|A regra permite tráfego na porta 443.|—
+A|PERSONALIZAR|v|Alterar algo para as necessidades de uma pessoa ou de uma equipe.|Personalize as colunas do painel.|—
+N|pertinente|adj|IMPORTANTE (adj)|Anexe os logs importantes ao chamado.|Anexe os logs pertinentes ao chamado.
+N|pesquisar|v|PROCURAR (v)|Procure o ID do pedido no log.|Pesquise o ID do pedido no log.
+A|PESSOA|s|Ser humano.|Uma pessoa precisa aprovar a alteração.|—
+A|PLANEJAR|v|Decidir antes o que fazer e como fazer.|Planeje a janela de manutenção com a equipe.|—
+A|PLANO|s|Lista de ações que você decide fazer, em uma ordem.|Escreva o plano de rollback antes do deploy.|—
+A|PODER|v|Ter a capacidade ou a permissão de fazer algo.|Você pode cancelar a operação a qualquer momento.|O serviço pode falhar. (Use: O serviço falha quando o disco está cheio.) / O serviço poderá parar. (Use: O serviço vai parar às 22:00 UTC-03:00.)
+N|pois|conj|PORQUE (conj)|Reinicie o pod, porque a equipe alterou a configuração.|Reinicie o pod, pois a configuração mudou.
+A|POR|prep|Indica o caminho, o item que uma ação usa ou a quantidade em cada unidade.|O limite é de 100 requisições por minuto.|—
+A|POR CAUSA DE|prep|Indica a causa de algo.|A fila parou por causa de um erro de permissão.|—
+N|por conseguinte|loc|PORTANTO (conj)|O certificado não é válido. Portanto, a conexão falha.|O certificado é inválido e, por conseguinte, a conexão falha.
+A|POR EXEMPLO|adv|Indica um item que mostra a regra geral.|Use um formato de texto, por exemplo JSON ou YAML.|—
+N|por favor|loc|— remova (use o imperativo)|Digite a senha.|Por favor, digite a senha.
+N|por intermédio de|loc|COM (prep)|Envie o arquivo com o comando `sftp`.|Envie o arquivo por intermédio do comando `sftp`.
+N|por isso|loc|PORTANTO (conj)|O cache está cheio. Portanto, a latência aumentou.|O cache está cheio, por isso a latência aumentou.
+N|por meio de|loc|COM (prep); POR (prep)|Acesse o banco com a VPN.|Acesse o banco por meio da VPN.
+N|porém|conj|MAS (conj)|O pod inicia, mas não fica pronto.|O pod inicia; porém, não fica pronto.
+A|PORCENTAGEM|s|Valor em partes de 100.|O painel mostra a porcentagem de requisições com erro.|—
+N|porquanto|conj|PORQUE (conj)|O deploy parou porque o teste falhou.|O deploy parou, porquanto o teste falhou.
+A|PORQUE|conj|Indica a causa.|O serviço parou porque o disco está cheio.|—
+A|PORTANTO|conj|Indica uma consequência do texto anterior.|O disco está cheio. Portanto, o serviço parou.|—
+N|posicionar|v|COLOCAR (v)|Clique no campo **Nome**.|Posicione o cursor no campo **Nome**.
+A|POSIÇÃO|s|Lugar de um item em relação a outros itens.|Altere a posição da coluna na tabela.|—
+N|possibilitar|v|PERMITIR (v)|A opção `--force` permite sobrescrever o arquivo.|A opção `--force` possibilita sobrescrever o arquivo.
+A|POSSÍVEL|adj|Que acontece ou existe em 1 condição ou mais.|Teste todas as entradas possíveis.|—
+N|possivelmente|adv|— escreva o fato que você verificou ou o passo que verifica a causa|Verifique se a causa da falha é o cache.|Possivelmente, a falha é do cache.
+N|possuir|v|TER (v)|A conta tem 2 usuários administradores.|A conta possui dois usuários administradores.
+N|posterior|adj|PRÓXIMO (adj); DEPOIS (adv)|A próxima versão vai remover este parâmetro.|Uma versão posterior removerá este parâmetro.
+N|posteriormente|adv|DEPOIS (adv)|Depois, revise o log.|Posteriormente, revise o log.
+N|praticamente|adv|APROXIMADAMENTE (adv) — ou dê o valor exato|O disco está 98% cheio.|O disco está praticamente cheio.
+A|PRAZO|s|Data ou tempo máximo para terminar algo.|O prazo para responder ao pedido é 5 dias úteis.|—
+A|PRECISAR|v|Ter necessidade de algo.|O instalador precisa de acesso à internet.|—
+A|PREENCHER|v|Colocar dados em todos os campos de um formulário.|Preencha o formulário de pedido de acesso.|—
+A|PREPARAR|v|Fazer o que é necessário antes de uma tarefa.|Prepare o ambiente de teste.|—
+A|PRESSIONAR|v|Aplicar força a uma tecla ou a um botão físico.|Pressione **Enter**.|—
+N|previamente|adv|ANTES (adv)|Crie o usuário antes.|Crie previamente o usuário.
+N|prévio|adj|ANTERIOR (adj)|Restaure a configuração anterior.|Restaure a configuração prévia.
+N|primeiramente|adv|PRIMEIRO (num)|Primeiro, pare o serviço.|Primeiramente, pare o serviço.
+A|PRIMEIRO|num|Que está antes de todos os outros na ordem.|O primeiro passo é fazer um backup.|—
+A|PRINCIPAL|adj|Mais importante entre vários itens.|O arquivo principal da configuração é `config.yaml`.|—
+A|PRIORIDADE|s|Nível que define a ordem das tarefas.|Defina a prioridade do chamado.|—
+A|PRIORIZAR|v|Decidir a ordem das tarefas de acordo com o impacto e com o prazo.|Priorize os defeitos críticos.|—
+A|PRIVADO|adj|Que apenas pessoas ou sistemas autorizados podem acessar.|Use uma sub-rede privada para o banco.|—
+A|PROBLEMA|s|Condição que impede o funcionamento correto ou o resultado esperado.|Descreva o problema no chamado.|—
+A|PROCEDIMENTO|s|Série de passos para fazer uma tarefa.|Siga este procedimento para restaurar o banco.|—
+N|proceder|v|FAZER (v); CONTINUAR (v)|Continue com o passo 4.|Proceda ao passo 4.
+A|PROCESSO|s|Série de atividades que gera um resultado a partir de uma entrada. Para o processo do sistema operacional, use o nome técnico (04-termos-tecnicos.md).|O processo de aprovação tem 2 etapas.|—
+A|PROCURAR|v|Tentar encontrar algo.|Procure a mensagem "timeout" no log.|—
+N|produzir|v|GERAR (v)|O job gera um arquivo CSV.|O job produz um arquivo CSV.
+N|propiciar|v|PERMITIR (v)|O cache permite respostas em menos de 10 ms.|O cache propicia respostas em menos de 10 ms.
+N|propósito|s|OBJETIVO (s)|O objetivo deste teste é medir a latência.|O propósito deste teste é medir a latência.
+N|prosseguir|v|CONTINUAR (v)|Clique em **Próximo** para continuar.|Clique em **Próximo** para prosseguir.
+A|PROTEGER|v|Impedir dano, perda ou acesso sem autorização.|Proteja a chave privada com uma senha.|—
+N|provavelmente|adv|— escreva o fato que você verificou ou o passo que verifica a causa|Verifique se a causa do erro é o DNS.|O erro provavelmente é do DNS.
+N|prover|v|FORNECER (v)|O serviço fornece tokens para as aplicações cliente.|O serviço provê tokens para as aplicações cliente.
+N|providenciar|v|FAZER (v); OBTER (v); PREPARAR (v)|Obtenha as credenciais de acesso. / Prepare o ambiente.|Providencie as credenciais de acesso. / Providencie o ambiente.
+A|PRÓXIMO|adj|Que está imediatamente depois na ordem.|Vá para o próximo passo.|O servidor fica próximo ao roteador. (Use: O servidor está ao lado do roteador.)
+A|PUBLICAR|v|Fazer um conteúdo, um pacote ou uma versão ficar disponível para outras pessoas.|Publique o pacote no registry do `npm`.|—
+A|PÚBLICO|adj|Que qualquer pessoa ou qualquer sistema pode acessar.|Não coloque dados pessoais em um bucket público.|—
+N|puxar|v|OBTER (v)|Obtenha os dados da API.|Puxe os dados da API.
+A|QUAL|pron|Indica uma pergunta sobre um item de um grupo.|Verifique qual versão está instalada.|—
+A|QUALIDADE|s|Nível em que um item está de acordo com os requisitos.|A revisão melhora a qualidade do código.|—
+A|QUALQUER|pron|Um item, sem importar qual.|Você pode usar qualquer porta livre.|—
+A|QUANDO|conj|No momento em que.|Quando o disco fica cheio, o serviço não grava os logs. / Quando o build terminar, execute os testes.|—
+A|QUANTIDADE|s|Número ou volume de itens.|Informe a quantidade de réplicas.|—
+N|quase|adv|APROXIMADAMENTE (adv)|A fila tem aproximadamente 10 000 mensagens.|A fila tem quase 10 000 mensagens.
+A|QUE|pron|Pronome relativo. Liga uma frase ao substantivo anterior.|Remova o arquivo que o script criou.|—
+A|QUE|conj|Liga uma frase a verbos como mostrar, indicar e informar.|O log mostra que a conexão falhou.|É necessário que você reinicie o serviço. (Use: Reinicie o serviço.)
+N|questão|s|PROBLEMA (s)|Existe um problema no servidor de e-mail.|Há uma questão com o servidor de e-mail.
+N|rapidamente|adv|RÁPIDO (adj); IMEDIATAMENTE (adv)|Com o índice novo, a consulta é mais rápida: 40 ms em vez de 900 ms.|Com o índice novo, a consulta executa rapidamente.
+A|RÁPIDO|adj|Que precisa de pouco tempo. Escreva o valor (02-regras.md, R6.4).|Com o índice, a consulta é mais rápida: 40 ms em vez de 900 ms.|A consulta nova é mais rápida. (Use: A consulta demora 40 ms em vez de 900 ms.)
+N|razão|s|CAUSA (s)|Descreva a causa do rollback.|Descreva a razão do rollback.
+A|REAL|adj|Que existe de fato e não é simulado.|Não use dados reais no ambiente de teste.|—
+N|realizar|v|FAZER (v) — ou verbo específico|Teste a restauração do backup.|Realize o teste de restauração do backup.
+N|realmente|adv|— remova a palavra|O cache diminui a carga do banco.|O cache realmente reduz a carga do banco.
+A|RECEBER|v|Começar a ter algo que outra pessoa ou outro sistema envia.|O servidor recebe a requisição na porta 443.|—
+A|RECOMENDAR|v|Informar que uma opção é a melhor.|A equipe de segurança recomenda chaves SSH do tipo Ed25519.|—
+A|RECUPERAR|v|Ter de novo algo perdido ou excluído.|Recupere o arquivo da lixeira.|—
+A|RECUSAR|v|Não aceitar.|O servidor recusa a conexão.|—
+A|REDEFINIR|v|Definir de novo um valor que já tem um valor, por exemplo com o valor padrão.|Redefina a senha do usuário. / Redefina as configurações com os valores padrão.|—
+N|reduzir|v|DIMINUIR (v)|Diminua o tamanho da imagem.|Reduza o tamanho da imagem.
+A|REFERÊNCIA|s|Nome ou número de outro documento, de outra seção ou de outro item que o texto indica.|A referência completa da API está no anexo B.|—
+N|referente a|loc|SOBRE (prep)|Leia a nota sobre a versão 3.|Leia a nota referente à versão 3.
+N|referido|adj|ESTE (pron)|Remova este arquivo.|Remova o referido arquivo.
+A|REGISTRAR|v|Gravar uma informação para usar depois.|O sistema registra cada tentativa de login.|—
+A|REGRA|s|Instrução que define o que é permitido ou obrigatório.|Crie uma regra de firewall para a porta 22.|—
+A|REINICIAR|v|Parar e iniciar de novo.|Reinicie o servidor de aplicação.|—
+N|reiterar|v|REPETIR (v)|Repita o pedido ao fornecedor.|Reitere o pedido ao fornecedor.
+N|relativo a|loc|SOBRE (prep)|Leia as instruções sobre o firewall.|Leia as instruções relativas ao firewall.
+A|RELATÓRIO|s|Documento que mostra resultados ou dados de um período.|Envie o relatório do incidente em até 48 h.|—
+N|relevante|adj|IMPORTANTE (adj)|Registre as informações importantes no chamado.|Registre as informações relevantes no chamado.
+A|REMOTO|adj|Que está em outro computador ou em outra rede.|Conecte ao servidor remoto com SSH.|—
+A|REMOVER|v|Fazer um item sair de um lugar, de um grupo ou de um sistema. REMOVER não diz que o item não existe mais (para este significado, use EXCLUIR).|Remova o usuário do grupo `admin`.|Remova o banco de teste. (Use: Exclua o banco de teste.)
+A|RENOMEAR|v|Dar outro nome a um item.|Renomeie o arquivo para `config.old`.|—
+A|REPARAR|v|Fazer um equipamento danificado funcionar de novo.|O fornecedor repara o disco danificado.|—
+A|REPETIR|v|Fazer de novo.|Repita os passos 2 a 4.|—
+N|reportar|v|INFORMAR (v)|Informe o defeito no rastreador de issues.|Reporte o defeito no rastreador de issues.
+A|REPRODUZIR|v|Fazer um erro acontecer de novo para analisar o erro.|Reproduza o erro no ambiente de teste.|—
+N|requerer|v|PRECISAR (v)|A instalação precisa de permissão de administrador.|A instalação requer permissão de administrador.
+N|requisitar|v|PEDIR (v)|Peça uma conta de serviço à equipe de plataforma.|Requisite uma conta de serviço à equipe de plataforma.
+A|REQUISITO|s|Condição obrigatória para um sistema, uma tarefa ou uma instalação.|Leia os requisitos de hardware na tabela 2.|—
+A|RESERVAR|v|Separar um recurso para usar depois.|Reserve 20% do disco para os logs.|—
+N|resetar|v|REDEFINIR (v); REINICIAR (v)|Redefina a senha. / Reinicie o roteador.|Resete a senha. / Resete o roteador.
+A|RESOLVER|v|Fazer um problema não existir mais.|Este patch resolve o erro de memória.|—
+N|respectivamente|adv|— reescreva em frases separadas|Defina A como 1. Defina B como 2.|Defina A e B como 1 e 2, respectivamente.
+A|RESPONDER|v|Dar uma resposta a uma pergunta, a uma mensagem ou a uma requisição.|A API responde em menos de 200 ms.|—
+A|RESPONSÁVEL|s|Pessoa ou equipe que faz uma etapa de um processo ou de um procedimento.|O responsável pela etapa 3 é a equipe de banco de dados.|O responsável pelo sistema. (Use: O dono do produto.)
+A|RESPOSTA|s|O que um sistema ou uma pessoa envia depois de receber uma pergunta ou uma requisição.|A resposta tem o código 200.|—
+N|ressaltar|v|— use NOTA (s)|**NOTA:** O backup não contém os logs.|Vale ressaltar que o backup não contém os logs.
+A|RESTAURAR|v|Fazer um sistema ou um conjunto de dados voltar a um estado anterior com uma cópia.|Restaure o banco com o backup de 2026-11-17.|—
+A|RESULTADO|s|O que uma ação ou um processo gera.|Compare o resultado com a tabela 3.|—
+A|RESUMO|s|Texto curto com as informações principais.|Escreva um resumo do incidente.|—
+N|retirar|v|REMOVER (v)|Remova o nó do balanceador de carga.|Retire o nó do balanceador de carga.
+N|retorno|s|RESPOSTA (s)|Aguarde a resposta do suporte.|Aguarde o retorno do suporte.
+A|REVISÃO|s|Leitura ou análise de algo para encontrar e corrigir erros.|A revisão do código é obrigatória.|—
+A|REVISAR|v|Ler ou analisar algo para encontrar e corrigir erros.|Revise o código antes do merge.|—
+A|RISCO|s|Possibilidade de dano, perda ou falha.|Este comando tem risco de perda de dados.|—
+N|rodar|v|EXECUTAR (v)|Execute os testes.|Rode os testes.
+A|SABER|v|Ter uma informação.|Para saber a versão, execute `app --version`.|—
+A|SAÍDA|s|Dados, um documento ou um item que um sistema ou uma etapa de um processo gera como resultado.|Redirecione a saída para um arquivo. / A saída da etapa 2 é o relatório aprovado.|—
+A|SAIR|v|Terminar uma sessão ou fechar um programa.|Saia do portal. / Saia do editor.|—
+N|sanar|v|RESOLVER (v); CORRIGIR (v)|Resolva o problema de rede.|Sane o problema de rede.
+A|SE|conj|Indica uma condição.|Se o teste falhar, não execute o deploy.|Instala-se o pacote. (Use: Instale o pacote.)
+A|SEÇÃO|s|Parte numerada de um documento.|Leia a seção 3.|—
+N|seguinte|adj|PRÓXIMO (adj); ABAIXO (adv)|Execute o comando abaixo. / Vá para o próximo passo.|Execute o seguinte comando.
+A|SEGUIR|v|Fazer uma ação de acordo com uma regra, uma instrução ou uma ordem.|Siga as instruções na tela.|Veja a lista a seguir. (Use: Veja a lista abaixo.)
+A|SEGUNDO|s|Unidade de tempo. Símbolo depois de um número: s. Um minuto tem 60 s.|O sistema mede a latência a cada segundo.|O tempo limite é de 30 segundos. (Use: O tempo limite é 30 s.) / Segundo a documentação, o limite é 10. (Use: De acordo com a documentação, o limite é 10.) / o segundo passo (Use: o passo 2)
+A|SEGURANÇA|s|Proteção contra dano, perda ou acesso sem autorização.|Leia as instruções de segurança.|—
+A|SEGURO|adj|Protegido contra dano, perda ou acesso sem autorização.|Armazene a senha em um lugar seguro.|Você está seguro da alteração? (Use: Confirme a alteração.)
+A|SEM|prep|Indica que um item não faz parte da ação ou do conjunto.|Execute o comando sem a opção `-f`.|—
+A|SEMANA|s|Período de 7 dias.|A equipe revisa os alertas 1 vez por semana.|—
+A|SEMELHANTE|adj|Que tem poucas diferenças de outro item.|O erro é semelhante ao erro do chamado anterior.|—
+A|SEMPRE|adv|Em todas as situações ou em todos os momentos.|Sempre faça um backup antes de uma migração.|—
+N|sendo assim|loc|PORTANTO (conj)|A réplica secundária tem um atraso de 30 s. Portanto, leia os dados da réplica primária.|A réplica está atrasada. Sendo assim, leia do primário.
+A|SEPARAR|v|Colocar itens em grupos diferentes.|Separe os logs por serviço.|—
+A|SEQUÊNCIA|s|Série de itens ou de ações em uma ordem.|Execute os comandos nesta sequência.|—
+A|SER|v|Indicar a identidade, uma característica fixa ou o valor de um item.|O valor padrão é 30.|A tabela será criada pelo script. (Use: O script vai criar a tabela.)
+A|SÉRIE|s|Conjunto de itens do mesmo tipo, um depois do outro.|O script executa uma série de testes.|—
+N|setar|v|DEFINIR (v); CONFIGURAR (v)|Defina a variável `NODE_ENV` como `production`.|Sete a variável `NODE_ENV` para production.
+A|SEU|pron|Que pertence a você, o leitor.|Digite a sua senha.|O serviço e seu arquivo de log. (Use: O serviço e o arquivo de log do serviço.)
+N|similar|adj|SEMELHANTE (adj)|Use uma configuração semelhante à configuração de produção.|Use uma configuração similar à de produção.
+A|SÍMBOLO|s|Sinal gráfico que indica um item, uma unidade ou uma operação.|O símbolo # indica um comentário.|—
+A|SIMPLES|adj|Que tem poucas partes ou poucos passos.|Use frases simples.|—
+N|simplesmente|adv|— remova a palavra|Execute o instalador.|Simplesmente execute o instalador.
+A|SIMULAR|v|Fazer um sistema funcionar como em uma condição real, sem esta condição real.|Simule uma falha de rede no ambiente de teste.|—
+A|SINAL|s|Marca, som ou luz que dá uma informação.|O sinal verde indica que o nó está pronto.|—
+A|SISTEMA|s|Conjunto de componentes que funcionam juntos com um objetivo.|O sistema de pagamento tem 3 serviços.|—
+N|só|adv|APENAS (adv)|Apenas o dono do repositório pode excluir o repositório.|Só o dono pode excluir o repositório.
+A|SOBRE|prep|Que tem como assunto.|Este guia tem informações sobre a API de pagamentos.|—
+N|solicitar|v|PEDIR (v)|Peça acesso ao banco de produção.|Solicite acesso ao banco de produção.
+A|SOLUÇÃO|s|Ação que resolve um problema.|Descreva a solução no chamado.|—
+N|somente|adv|APENAS (adv)|O endpoint aceita apenas o método `POST`.|O endpoint aceita somente POST.
+N|startar|v|INICIAR (v)|Inicie o worker.|Starte o worker.
+N|subir|v|INICIAR (v); ENVIAR (v) — para colocar uma versão em um ambiente, use "executar o deploy"|Inicie o contêiner. / Envie o arquivo para o bucket.|Suba o contêiner. / Suba o arquivo para o bucket.
+N|subsequente|adj|PRÓXIMO (adj)|O próximo passo cria o índice.|O passo subsequente cria o índice.
+A|SUBSTITUIR|v|Colocar um item no lugar de outro item.|Substitua o certificado antigo.|—
+A|SUCESSO|s|Resultado correto e completo de uma operação.|O comando retorna o código 0 quando a operação tem sucesso.|—
+A|SUFICIENTE|adj|Na quantidade necessária.|Verifique se o disco tem espaço suficiente.|—
+N|sugerir|v|RECOMENDAR (v)|A ferramenta recomenda um índice para a consulta.|A ferramenta sugere um índice para a consulta.
+A|SUPERIOR|adj|Que está na parte mais alta de uma tela, de uma página ou de um item.|O menu está na parte superior da tela.|—
+A|SUPORTE|s|Equipe que ajuda os usuários a resolver problemas técnicos.|Envie o log para o suporte.|O sistema dá suporte a arquivos PDF. (Use: O sistema aceita arquivos PDF.)
+N|suportar|v|ACEITAR (v); COMPATÍVEL (adj)|A API aceita JSON. / O agente é compatível com o Windows Server 2022.|A API suporta JSON. / O agente suporta Windows Server 2022.
+N|supracitado|adj|ESTE (pron)|Execute este script.|Execute o script supracitado.
+N|suprimir|v|REMOVER (v); OCULTAR (v)|Remova os dados pessoais do log. / Oculte os avisos.|Suprima os dados pessoais do log. / Suprima os avisos.
+A|TABELA|s|Dados organizados em linhas e colunas em um documento. Para a tabela de banco de dados, use o nome técnico (04-termos-tecnicos.md).|A tabela 2 mostra os limites de cada plano.|—
+N|tais como|loc|POR EXEMPLO (adv)|Use uma ferramenta de pacotes, por exemplo `npm` ou `pnpm`.|Use um gerenciador de pacotes, tais como npm ou pnpm.
+N|tal|pron|ESTE (pron)|Se este erro aparecer, reinicie o agente.|Caso tal erro apareça, reinicie o agente.
+A|TAMANHO|s|Medida do espaço que algo ocupa.|O tamanho máximo do arquivo é 50 MB.|—
+A|TAMBÉM|adv|Indica um item a mais, depois de outros itens que o texto já informou.|O pacote também instala a ferramenta de linha de comando.|—
+A|TAREFA|s|Trabalho que uma pessoa ou um sistema precisa fazer.|Atribua a tarefa ao analista de plantão.|—
+A|TEMPO|s|Duração de um evento ou de uma ação.|O tempo de resposta é 200 ms.|—
+A|TEMPORÁRIO|adj|Que existe apenas durante um período limitado.|Exclua os arquivos temporários.|—
+N|temporariamente|adv|TEMPORÁRIO (adj)|Use uma senha temporária.|Use uma senha válida temporariamente.
+N|tendo em vista|loc|PORQUE (conj)|Pare a sincronização, porque o disco de destino está cheio.|Tendo em vista que o disco de destino está cheio, pare a sincronização.
+A|TENTAR|v|Fazer algo sem saber se o resultado vai ser o resultado esperado.|Tente a conexão de novo.|—
+A|TENTATIVA|s|Ação de tentar algo.|A aplicação cliente faz 3 tentativas de conexão.|—
+A|TER|v|Conter algo como parte ou como característica.|O cluster tem 3 nós.|Você tem que reiniciar o serviço. (Use: Reinicie o serviço.)
+A|TERMINAR|v|Chegar ao fim ou fazer algo chegar ao fim.|A cópia termina em 10 min.|—
+A|TESTAR|v|Usar um item em condições controladas para saber se o item funciona.|Teste a restauração do backup.|—
+A|TESTE|s|Procedimento que mostra se algo funciona.|Execute os testes antes do merge.|—
+A|TEXTO|s|Conjunto de palavras escritas.|Escreva o texto da mensagem de erro em PTS-BR.|—
+A|TIPO|s|Grupo de itens com as mesmas características.|Escolha o tipo de instância.|—
+N|time|s|EQUIPE (s)|A equipe de plantão recebe o alerta.|O time de plantão recebe o alerta.
+N|tirar|v|REMOVER (v)|Remova o nó do cluster.|Tire o nó do cluster.
+A|TÍTULO|s|Nome de um documento, de uma seção ou de uma janela.|Use um título curto para o chamado.|—
+A|TODO|pron|O conjunto completo, sem exceção.|Pare todos os serviços.|—
+N|todavia|conj|MAS (conj)|O backup terminou, mas o tamanho é menor que o normal.|O backup terminou; todavia, o tamanho é menor que o normal.
+A|TOTAL|adj|Que contém todas as partes.|O uso total de disco é 80%.|—
+N|totalmente|adv|COMPLETO (adj)|A migração está completa.|A migração está totalmente concluída.
+A|TRANSFERIR|v|Fazer outra pessoa ou outra conta ficar responsável por um item.|Transfira o repositório para a organização.|—
+N|tratativa|s|AÇÃO (s); SOLUÇÃO (s)|Registre as ações no chamado.|Registre as tratativas no chamado.
+N|trocar|v|SUBSTITUIR (v); ALTERAR (v)|Substitua o disco. / Altere a senha.|Troque o disco. / Troque a senha.
+N|tu|pron|VOCÊ (pron) — ou use o imperativo|Abra o terminal.|Abre o terminal.
+A|ÚLTIMO|adj|Que está depois de todos os outros, em uma sequência que o texto define.|Desfaça a última alteração.|Instale a última versão estável. (Use: Instale a versão 2.4.1.)
+A|UM|art|Artigo indefinido. Indica um item não específico. Para quantidade, use o algarismo (1).|Crie um usuário.|—
+N|uma vez que|loc|PORQUE (conj); DEPOIS DE (prep)|O job falhou porque a credencial não é válida.|O job falhou, uma vez que a credencial é inválida.
+N|unicamente|adv|APENAS (adv)|Use a conta `root` apenas durante um incidente.|Use a conta root unicamente para emergências.
+A|UNIDADE|s|Quantidade padrão de uma medida.|Informe o tamanho com a unidade, por exemplo 512 MB.|—
+A|ÚNICO|adj|Que não tem outro igual no mesmo conjunto.|Cada pedido tem um ID único.|—
+A|URGENTE|adj|Que precisa de uma ação imediatamente.|Os incidentes SEV1 são urgentes.|—
+A|USAR|v|Fazer algo funcionar para um objetivo.|Use a opção `--dry-run` para testar.|—
+A|USO|s|Ação de usar um item, uma regra ou um recurso. Para a quantidade de um recurso que um sistema usa, use CONSUMO (s).|Esta seção explica o uso da opção `--dry-run`.|O uso de CPU é 90%. (Use: O consumo de CPU é 90%.) / O uso do comando é simples. (Use: O comando é simples.)
+N|utilizar|v|USAR (v)|Use o arquivo de exemplo.|Utilize o arquivo de exemplo.
+A|VALIDADE|s|Período em que algo é válido.|A validade do certificado é de 90 dias.|—
+A|VÁLIDO|adj|Que está de acordo com as regras e que o sistema aceita.|O token é válido por 1 h.|—
+A|VALOR|s|Número, texto ou dado de uma variável, de um campo ou de uma medida.|Defina o valor da variável `TIMEOUT`.|—
+A|VÁRIOS|pron|Mais de 2. Se você sabe o número, escreva o número (02-regras.md, R6.4).|O log tem vários erros de conexão: 12 erros em 5 min.|O log tem vários erros. (Use: O log tem 12 erros de conexão em 5 min.)
+A|VAZIO|adj|Sem conteúdo.|O campo **Nome** está vazio.|—
+A|VELOCIDADE|s|Quantidade de dados ou de ações por unidade de tempo.|A velocidade de cópia é de 100 MB/s.|—
+A|VER|v|Ler uma informação ou identificar um item em uma tela, em um documento ou em um equipamento.|Veja a tabela 2.|Veja se o serviço está ativo. (Use: Verifique se o serviço está ativo.)
+A|VERDADEIRO|adj|Que está de acordo com os fatos.|Se a condição for verdadeira, o pipeline executa o job `deploy`.|—
+A|VERDE|adj|Da cor verde. Em painéis, indica um estado normal.|O ícone verde indica que o serviço está ativo.|—
+A|VERIFICAÇÃO|s|Ação que mostra se uma condição é verdadeira ou se um valor está correto.|A verificação de integridade falhou.|—
+A|VERIFICAR|v|Ver ou medir algo para saber se uma condição é verdadeira ou se um valor está correto.|Verifique se a porta 443 está aberta.|Verifique o log para entender a falha. (Use: Analise o log para entender a falha.)
+A|VERMELHO|adj|Da cor vermelha. Em painéis, indica um estado de erro.|O ícone vermelho indica que o serviço está parado.|—
+A|VERSÃO|s|Estado identificado de um software ou de um documento em um momento.|Atualize para a versão 2.4.|—
+A|VEZ|s|Cada ocorrência de um evento em uma sequência.|A aplicação cliente tenta a conexão 3 vezes.|—
+N|via|prep|POR (prep); COM (prep)|Acesse o servidor com SSH.|Acesse o servidor via SSH.
+N|viabilizar|v|PERMITIR (v)|O token permite o acesso à API.|O token viabiliza o acesso à API.
+N|vincular|v|ASSOCIAR (v)|Associe o domínio ao certificado.|Vincule o domínio ao certificado.
+N|visando|v|PARA (prep)|Crie réplicas para aumentar a disponibilidade.|Crie réplicas visando aumentar a disponibilidade.
+A|VISÍVEL|adj|Que uma pessoa pode ver.|O botão **Excluir** está visível apenas para administradores.|—
+N|visto que|loc|PORQUE (conj)|O pod reinicia porque não tem memória livre.|O pod reinicia, visto que a memória se esgota.
+N|visualizar|v|VER (v); MOSTRAR (v)|Veja os logs no painel. / O painel mostra os logs.|Visualize os logs no painel.
+A|VOCÊ|pron|A pessoa que lê o texto.|Você pode cancelar o processo a qualquer momento.|O usuário deve clicar em Salvar. (Use: Clique em **Salvar**.)
+A|VOLTAR|v|Ir de novo para um lugar ou para um estado anterior.|Volte para a tela anterior.|Volte o deploy. (Use: Reverta o deploy.)
+N|zerar|v|REDEFINIR (v); LIMPAR (v)|Redefina a variável `contador` para `0`.|Zere o contador.
+A|PROJETO|s|Trabalho com um objetivo e um prazo definidos, com os arquivos e os recursos deste trabalho.|Organize os arquivos por projeto.|—
+A|PAGAMENTO|s|Transferência de dinheiro de um cliente para uma empresa.|O serviço de pagamento confirma cada pagamento em até 2 s.|—
+A|RESTAURAÇÃO|s|Ação de restaurar um sistema ou um conjunto de dados.|Teste a restauração do backup 1 vez por mês.|—
+A|PRONTO|adj|Que pode começar o trabalho.|O nó está pronto. O cluster pode enviar pods para o nó.|—
+A|NADA|pron|Nenhum item. Use com NÃO antes do verbo.|O comando não retorna nada.|—
+A|TUDO|pron|Todos os itens de um conjunto.|O backup copia tudo da pasta `/data`.|—
+A|QUEM|pron|Pronome relativo para uma pessoa ou para uma equipe.|Informe quem executou o deploy.|—
+A|SIM|adv|Indica uma resposta afirmativa.|Se a resposta for sim, vá para o passo 4.|—
+A|PRÓPRIO|adj|Que pertence ao item de que a frase fala.|Cada serviço tem um banco de dados próprio.|—
+A|PEQUENO|adj|Com tamanho ou quantidade menor que o normal. Escreva o valor (02-regras.md, R6.4).|Use um disco pequeno, de 20 GB, no ambiente de teste.|Use um disco pequeno. (Use: Use um disco de 20 GB.)
+A|SOLTAR|v|Parar de pressionar um botão ou uma tecla.|Arraste o arquivo até a área **Anexos** e solte o botão do mouse.|—
+N|principalmente|adv|— escreva a condição exata|O erro acontece quando o disco está cheio.|O erro acontece principalmente quando o disco está cheio.
+N|mencionar|v|INFORMAR (v); ESCREVER (v)|Escreva o número do chamado no e-mail.|Mencione o número do chamado no e-mail.
+N|tornar-se|v|FICAR (v)|O certificado fica inválido em 2026-12-01.|O certificado se torna inválido em 2026-12-01.
+N|ocasionar|v|CAUSAR (v)|A atualização causa a perda da sessão.|A atualização ocasiona a perda da sessão.
+N|terceiro|num|— use o número: "o passo 3", "a tentativa 3"|Repita o passo 3.|Repita o terceiro passo.
+N|perfil de acesso|loc|— use o nome técnico "papel de acesso" (04-termos-tecnicos.md, NT-16)|Atribua ao usuário o papel de acesso `leitura`.|Atribua ao usuário o perfil de acesso `leitura`.
+N|plantonista|s|— use o nome técnico "analista de plantão" (04-termos-tecnicos.md, NT-19)|Envie um alerta ao analista de plantão.|Acione o plantonista.
+N|reinício|s|REINICIAR (v)|O comando reinicia todos os pods. Os pods não respondem por 5 min.|O reinício dos pods demora 5 min.
+N|status|s|ESTADO (s) — "status" apenas em literais e no nome técnico "código de status" (04-termos-tecnicos.md)|Verifique o estado do pod.|Verifique o status do pod.
+A|SITUAÇÃO|s|Conjunto dos fatos e das condições de um momento.|Descreva a situação do incidente na primeira mensagem.|—
+A|OCORRÊNCIA|s|Cada vez que uma palavra, um termo ou um evento aparece.|Escreva o nome completo da sigla na primeira ocorrência.|—
+A|OFICIAL|adj|Que a organização responsável publica ou aprova.|Use a grafia oficial do nome do produto.|—
+A|TRABALHO|s|Atividade que uma pessoa, uma equipe ou um sistema faz para obter um resultado.|O worker obtém o trabalho da fila.|—
+A|ORIGINAL|adj|Que existe antes de uma cópia ou de uma alteração.|Copie o arquivo. O arquivo original continua na pasta `/etc`.|—
+A|TRADUZIR|v|Escrever um texto em outra língua com o mesmo significado.|Não traduza as mensagens do sistema.|—
+A|RESPONSABILIDADE|s|Tarefa ou resultado que uma pessoa ou uma equipe precisa fazer ou obter.|A responsabilidade do revisor é verificar o texto.|—
+A|PRÁTICA|s|Forma de trabalho que uma equipe usa de forma regular.|A revisão de código é uma prática da equipe.|—
+A|TRANSFERÊNCIA|s|Ação de transferir um item.|A transferência do repositório demora 1 min.|—
+A|PERTENCER|v|Ser parte de um grupo ou de um conjunto.|O usuário pertence ao grupo `admin`.|—
+A|TÉCNICO|adj|Que é sobre tecnologia ou sobre o funcionamento de um sistema.|A seção 4 tem os detalhes técnicos.|—
+A|MÉDIO|adj|Que é a soma dos valores dividida pelo número de valores.|O tempo médio de resposta é 120 ms.|—
+A|MELHOR|adj|Que tem mais qualidade que os outros itens de um grupo.|Compare os 2 planos e escolha o melhor.|—
+A|SECRETO|adj|Que apenas as pessoas ou os sistemas com permissão podem saber.|A chave privada é secreta.|—
+A|REUNIÃO|s|Evento com 2 ou mais pessoas para decidir ou para informar algo.|Informe o assunto na reunião.|—
+A|PROCESSAR|v|Executar operações com dados para obter um resultado.|O worker processa 100 mensagens por segundo.|—
+A|VENDER|v|Dar um produto, ou o uso de um produto, a um cliente pelo pagamento de um valor.|O provedor de nuvem vende o armazenamento por GB.|—
+A|NINGUÉM|pron|Nenhuma pessoa.|Ninguém pode alterar o log de auditoria.|—
+A|ORGANIZAÇÃO|s|Grupo de pessoas com estrutura e objetivo comuns, por exemplo uma empresa.|Transfira o repositório para a organização.|—
+A|NATIVO|adj|Que tem a língua do texto como primeira língua.|O leitor nativo conhece os verbos do português.|—
+A|PROIBIR|v|Não permitir uma ação com uma regra.|A política proíbe senhas com menos de 12 caracteres.|—
+A|PREFERIDO|adj|Que a regra ou a equipe escolhe entre 2 ou mais opções.|Use o termo preferido da lista.|—
+N|transmitir|v|ENVIAR (v)|O servidor envia os dados para a aplicação cliente.|O servidor transmite os dados para a aplicação cliente.
+A|PAÍS|s|Área com leis próprias, por exemplo o Brasil.|A LGPD protege os dados pessoais das pessoas no país.|—
+A|SIGNIFICAR|v|Ter um significado. O sujeito é uma palavra, uma sigla ou um termo.|A sigla "RTO" significa "objetivo de tempo de recuperação".|O código 0 significa sucesso. (Use: O código 0 indica sucesso.)

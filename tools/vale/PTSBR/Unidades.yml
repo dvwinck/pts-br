@@ -1,0 +1,13 @@
+# R8.4 (Seção 8) — unidade por extenso ou informal depois de número, e número
+# sem espaço antes do símbolo. Use o símbolo com espaço: "10 min", "2,5 s", "16 GB".
+# Dias, semanas e meses não têm símbolo no PTS-BR: "5 dias úteis" é correto.
+# "KB" e "Mbps" não são aprovados (R8.4): use "kB" e "Mbit/s". Uma hora do dia ("às 14h")
+# não recebe este alerta: o formato da hora (R8.5, "14:00") é verificado pelo revisor.
+extends: existence
+message: "R8.4: '%s': use o símbolo da unidade depois de um espaço ('10 min', '512 MB')."
+level: warning
+nonword: true
+tokens:
+  - '(?<![\p{L}\p{N}])\p{N}+(?:[.,]\p{N}+)?\s+(?:[Mm]ilissegundos?|[Ss]egundos?|[Mm]inutos?|[Hh]oras?|[Bb]ytes?|[Kk]ilobytes?|[Qq]uilobytes?|[Mm]egabytes?|[Gg]igabytes?|[Tt]erabytes?)(?![\p{L}-])'
+  - '(?<![\p{L}\p{N}])\p{N}+(?:[.,]\p{N}+)?\s*(?:segs?|mins|hrs?|Gb|Mb|Kb|KB|Mbps|Gbps|kbps|Kbps)(?![\p{L}-])'
+  - '(?<![\p{L}\p{N}.])(?<!às\s)(?<!as\s)\p{N}+(?:[.,]\p{N}+)?(?:ms|s|min|h|kB|KB|MB|GB|TB|KiB|MiB|GiB|TiB)(?![\p{L}\p{N}-])'

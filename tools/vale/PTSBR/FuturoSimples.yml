@@ -1,0 +1,9 @@
+# R3.1 (Seção 3) — futuro do presente simples ("enviará", "será") e "irá" + infinitivo.
+# Use "vai" + infinitivo. A lista de exceções exclui nomes próprios comuns.
+extends: existence
+message: "R3.1: futuro simples em '%s'. Use 'vai' + infinitivo ('vai enviar')."
+level: warning
+ignorecase: true
+nonword: true
+tokens:
+  - '(?<![\p{L}-])(?!(?:pará|paraná|verão|ceará)(?![\p{L}-]))\p{L}*(?:ará|erá|irá|ôrá|arão|erão|irão|aremos|eremos|iremos|arei|erei|irei)(?![\p{L}-])'

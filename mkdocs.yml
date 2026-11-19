@@ -1,0 +1,95 @@
+site_name: PTS-BR — Português Técnico Simplificado
+site_description: Linguagem controlada para documentação técnica em português do Brasil, inspirada na estrutura do ASD-STE100.
+site_url: https://dvwinck.github.io/pts-br/
+repo_url: https://github.com/dvwinck/pts-br
+repo_name: dvwinck/pts-br
+edit_uri: edit/main/
+docs_dir: _build/docs
+site_dir: site
+copyright: Texto sob a licença CC BY 4.0. Não é uma tradução oficial do ASD-STE100 nem tem aprovação da ASD.
+
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - toc.follow
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+
+plugins:
+  - search:
+      lang: pt
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - tables
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+
+nav:
+  - Início: README.md
+  - Especificação:
+      - 01 Introdução: 01-introducao.md
+      - 02 Regras de escrita: 02-regras.md
+      - 03 Dicionário controlado: 03-dicionario.md
+      - 04 Termos técnicos: 04-termos-tecnicos.md
+      - 05 Governança: 05-governanca.md
+      - 06 Exemplos: 06-exemplos.md
+      - Versões (CHANGELOG): CHANGELOG.md
+  - Processo de criação:
+      - Briefing: BRIEF.md
+      - Rubrica de avaliação: reviews/RUBRICA.md
+      - Decisões da rodada 2: reviews/DECISOES-R2.md
+      - Decisões da rodada 3: reviews/DECISOES-R3.md
+      - Decisões da rodada 4: reviews/DECISOES-R4.md
+      - Avaliações da rodada 1:
+          - Processos: reviews/round-1/processos.md
+          - Tecnologia: reviews/round-1/tecnologia.md
+          - Desenvolvimento: reviews/round-1/desenvolvimento.md
+          - Documentação: reviews/round-1/documentacao.md
+      - Avaliações da rodada 2:
+          - Processos: reviews/round-2/processos.md
+          - Tecnologia: reviews/round-2/tecnologia.md
+          - Desenvolvimento: reviews/round-2/desenvolvimento.md
+          - Documentação: reviews/round-2/documentacao.md
+      - Avaliações da rodada 3:
+          - Processos: reviews/round-3/processos.md
+          - Tecnologia: reviews/round-3/tecnologia.md
+          - Desenvolvimento: reviews/round-3/desenvolvimento.md
+          - Documentação: reviews/round-3/documentacao.md
+      - Avaliações da rodada 4:
+          - Processos: reviews/round-4/processos.md
+          - Tecnologia: reviews/round-4/tecnologia.md
+          - Desenvolvimento: reviews/round-4/desenvolvimento.md
+          - Documentação: reviews/round-4/documentacao.md
+
+validation:
+  links:
+    anchors: warn
+    unrecognized_links: warn

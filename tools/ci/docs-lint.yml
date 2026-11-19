@@ -1,0 +1,95 @@
+# Workflow do repositório da especificação PTS-BR (GitHub Actions).
+#
+# Este workflow verifica a própria especificação. Para um repositório de equipe, use o
+# arquivo docs-lint-equipe.yml: aquele workflow não depende da estrutura de pastas da
+# especificação (05-governanca.md, seção 6.7).
+#
+# Uso: copie este arquivo para .github/workflows/docs-lint.yml no repositório da especificação.
+# O workflow supõe a estrutura deste repositório:
+#   tools/vale/                       regras Vale
+#   tools/check_spec.py               linter em Python (motor de referência da versão 1.0.0)
+#   tools/lista_branca.py             lista branca (decisão E1, regra D9 do 03)
+#   tools/gerar_regras_dicionario.py  gerador de PalavrasNaoAprovadas.yml (03 e 04)
+#   03-dicionario.md, 04-termos-tecnicos.md
+#
+# Privilégio mínimo: o token só lê o repositório. Nenhum job escreve no pull request, e
+# nenhuma ação de terceiros executa: o workflow usa apenas a ação oficial actions/checkout.
+#
+# Versões fixas:
+#   - actions/checkout usa a tag v5 (Node 24). Esta versão da especificação não conferiu o SHA
+#     do commit desta tag. Fixe o SHA da versão antes de usar em produção:
+#     actions/checkout@<SHA de 40 caracteres>  # v5.x.y
+#   - O Vale: o passo compara o hash SHA-256 do pacote com o arquivo de checksums da mesma
+#     release do Vale. Para não depender deste arquivo, escreva o hash do pacote no workflow.
+
+name: PTS-BR (especificação)
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+      - 'tools/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  VALE_VERSION: '3.27.0'
+
+jobs:
+  regras:
+    name: Testes das regras e autoverificação (motor Python)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5  # fixe o SHA da versão antes de usar em produção
+
+      - name: Verificar os arquivos de origem do dicionário (05, seção 8.5, critério 1)
+        run: python3 tools/build.py
+
+      - name: Confirmar que o 03 é o resultado do build (05, seção 8.5, critério 2)
+        run: |
+          python3 tools/build.py --render "$RUNNER_TEMP/03-dicionario.md"
+          diff -u 03-dicionario.md "$RUNNER_TEMP/03-dicionario.md"
+
+      - name: Verificar se as regras de palavras correspondem ao 03 e ao 04
+        run: python3 tools/gerar_regras_dicionario.py --verificar
+
+      - name: Testes das regras, do 06 e da lista branca
+        run: python3 tools/check_spec.py --teste
+
+      - name: Autoverificação, lista negra (bloqueia com 1 alerta ou mais)
+        run: python3 tools/check_spec.py --spec --falhar
+
+      - name: Autoverificação, lista branca (bloqueia acima de 1% de palavras fora)
+        run: python3 tools/check_spec.py --lista-branca --spec --meta 1
+
+  vale:
+    name: Testes das regras com o Vale (critério de entrada do Piloto)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5  # fixe o SHA da versão antes de usar em produção
+
+      - name: Instalar o Vale e verificar o hash SHA-256
+        run: |
+          set -euo pipefail
+          base="https://github.com/vale-cli/vale/releases/download/v${VALE_VERSION}"
+          pacote="vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          curl --silent --show-error --fail --location --remote-name "$base/$pacote"
+          curl --silent --show-error --fail --location --remote-name \
+            "$base/vale_${VALE_VERSION}_checksums.txt"
+          grep " $pacote\$" "vale_${VALE_VERSION}_checksums.txt" | sha256sum --check
+          mkdir --parents "$HOME/.local/bin"
+          tar --extract --gzip --file "$pacote" --directory "$HOME/.local/bin" vale
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Testes das regras com o Vale
+        # As regras da versão 1.0.0 ainda não têm resultado com o Vale (05, seção 6.6). Este passo
+        # mostra a saída no log e grava a mesma saída em tools/vale/testes/resultado-vale-<versão>.txt
+        # no runner. O mantenedor copia a saída do log para este arquivo no repositório: este
+        # arquivo é o registro de 05, seção 6.6.
+        run: |
+          set -o pipefail
+          arquivo="tools/vale/testes/resultado-vale-${VALE_VERSION}.txt"
+          { date --utc +%Y-%m-%dT%H:%MZ; vale --version
+            python3 tools/check_spec.py --teste --motor vale --vale "$HOME/.local/bin/vale"; } | tee "$arquivo"

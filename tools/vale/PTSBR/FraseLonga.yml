@@ -1,0 +1,11 @@
+# R4.2 (Seção 4) — frase de texto descritivo com mais de 25 palavras.
+# O Vale conta tokens de letras e números e conta "10 GB" como 2 palavras. O Vale não lê o
+# código em linha nem o negrito (IgnoredScopes = code, tt, strong): estes trechos contam 0.
+# O check_spec.py conta o código em linha e o negrito de até 3 palavras como 1 palavra.
+# O revisor confirma os casos perto do limite. Nível warning até a medição de M6.
+extends: occurrence
+message: "R4.2: frase com mais de 25 palavras. Divida a frase."
+level: warning
+scope: sentence
+max: 25
+token: '[\p{L}\p{N}][\p{L}\p{N}_./-]*'

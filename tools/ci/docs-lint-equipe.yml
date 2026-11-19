@@ -1,0 +1,153 @@
+# Workflow PTS-BR para o repositório de uma equipe (GitHub Actions).
+#
+# Este workflow não depende da estrutura de pastas da especificação nem do repositório da
+# equipe. Ele obtém as regras de uma versão fixa da especificação (PTSBR_REF) numa pasta
+# separada (.pts-br/) e verifica apenas as pastas de DOCS.
+#
+# Uso:
+#   1. Copie este arquivo para .github/workflows/docs-lint.yml no repositório da equipe.
+#   2. Altere as variáveis do bloco "env": o repositório e a versão da especificação, as pastas
+#      de documentação, a fase da equipe, o glossário do projeto e os arquivos de mensagens.
+#   3. Opcional: copie tools/vale/.vale.ini da especificação para a raiz do repositório, escreva
+#      StylesPath = .pts-br/tools/vale e altere as pastas da seção de procedimentos. O Vale e o
+#      check_spec.py (--config) leem o mesmo arquivo. Sem este arquivo, os 2 motores usam o
+#      .vale.ini da versão.
+#
+# A isenção --spec do check_spec.py vale apenas para o texto da própria especificação.
+# Este workflow não usa a isenção (05-governanca.md, seção 6.7).
+#
+# Privilégio mínimo: o token só lê o repositório. O resultado fica no log do job e no resumo do
+# job. Nenhuma ação de terceiros executa: o workflow usa apenas a ação oficial actions/checkout.
+# Repositório da especificação privado: o GITHUB_TOKEN deste repositório não lê outro
+# repositório. Crie um token com permissão apenas de leitura do repositório da especificação,
+# grave o token no segredo PTSBR_TOKEN e retire o comentário da linha "token:" abaixo.
+#
+# Métricas M1 e M2 (05, seções 4.1 e 5.2): o passo "Métricas" mostra a linha
+# [METRICAS][palavras: N][M1: N][M2-candidatas: N] de cada documento no resumo do job. O revisor
+# copia os valores da primeira execução do pull request (a submissão) para o comentário de
+# resultado. O comentário de resultado é o registro durável: o log e o resumo do job expiram.
+#
+# Versões fixas:
+#   - actions/checkout usa a tag v5 (Node 24). Esta versão da especificação não conferiu o SHA
+#     do commit desta tag. Fixe o SHA da versão antes de usar em produção:
+#     actions/checkout@<SHA de 40 caracteres>  # v5.x.y
+#   - O Vale: o passo compara o hash SHA-256 do pacote com o arquivo de checksums da mesma
+#     release do Vale. Para não depender deste arquivo, escreva o hash do pacote no workflow.
+#   - As regras da versão 1.0.0 ainda não têm resultado com o Vale (05, seção 6.6). O
+#     check_spec.py é o motor de referência.
+
+name: PTS-BR
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '**/*.json'
+      - '**/*.po'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PTSBR_REPO: 'organizacao/pts-br'   # repositório da especificação
+  PTSBR_REF: 'v1.0.0'                # tag da última PATCH da versão que os documentos declaram (05, 8.4)
+  DOCS: 'docs README.md'             # pastas e arquivos Markdown que o linter verifica, separados por espaço
+  GLOSSARIO: ''                      # glossário do projeto (04, seção 7), por exemplo docs/glossario.md
+  MENSAGENS: ''                      # arquivos de tradução .json ou .po, por exemplo locales/pt-BR.json
+  FASE: 'piloto'                     # piloto | expansao | padrao (05, seção 3)
+  VALE_VERSION: '3.27.0'
+
+jobs:
+  lint:
+    name: Linter PTS-BR
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5  # fixe o SHA da versão antes de usar em produção
+
+      - name: Obter as regras da versão ${{ env.PTSBR_REF }} da especificação
+        uses: actions/checkout@v5  # fixe o SHA da versão antes de usar em produção
+        with:
+          repository: ${{ env.PTSBR_REPO }}
+          ref: ${{ env.PTSBR_REF }}
+          path: .pts-br
+          # token: ${{ secrets.PTSBR_TOKEN }}  # apenas para um repositório da especificação privado
+
+      - name: Listar os arquivos e as opções
+        run: |
+          set -euo pipefail
+          # Um item de DOCS que não existe não interrompe o job.
+          arquivos=$(find $DOCS -name '*.md' -not -path './.pts-br/*' 2>/dev/null || true)
+          echo "ARQUIVOS<<FIM" >> "$GITHUB_ENV"
+          echo "$arquivos" >> "$GITHUB_ENV"
+          echo "FIM" >> "$GITHUB_ENV"
+          config=".pts-br/tools/vale/.vale.ini"
+          if [ -f .vale.ini ]; then config=".vale.ini"; fi
+          echo "CONFIG=$config" >> "$GITHUB_ENV"
+          opcoes=""
+          if [ -n "$GLOSSARIO" ]; then opcoes="--glossario $GLOSSARIO"; fi
+          echo "OPCOES=$opcoes" >> "$GITHUB_ENV"
+          if [ -z "$arquivos" ]; then echo "Nenhum arquivo .md em: $DOCS"; fi
+
+      - name: Instalar o Vale e verificar o hash SHA-256
+        run: |
+          set -euo pipefail
+          base="https://github.com/vale-cli/vale/releases/download/v${VALE_VERSION}"
+          pacote="vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          curl --silent --show-error --fail --location --remote-name "$base/$pacote"
+          curl --silent --show-error --fail --location --remote-name \
+            "$base/vale_${VALE_VERSION}_checksums.txt"
+          grep " $pacote\$" "vale_${VALE_VERSION}_checksums.txt" | sha256sum --check
+          mkdir --parents "$HOME/.local/bin"
+          tar --extract --gzip --file "$pacote" --directory "$HOME/.local/bin" vale
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Vale
+        run: |
+          set -uo pipefail
+          if [ -z "$ARQUIVOS" ]; then exit 0; fi
+          # O Vale sai com o código 1 para alertas de nível error e com o código 2 para um erro
+          # de configuração ou de regra. O código 2 falha o job também no Piloto.
+          vale --config "$CONFIG" --output line $ARQUIVOS
+          rc=$?
+          if [ $rc -ge 2 ]; then echo "Erro do Vale (configuração ou regra): código $rc"; exit $rc; fi
+          # Piloto: todas as regras têm o nível warning e o job não bloqueia o merge.
+          # Expansão e Padrão: uma regra com o nível error bloqueia o merge (05, seção 6.4).
+          if [ $rc -eq 1 ] && [ "$FASE" != "piloto" ]; then exit 1; fi
+          exit 0
+
+      - name: Motor Python (referência da versão 1.0.0)
+        run: |
+          set -euo pipefail
+          if [ -z "$ARQUIVOS" ]; then exit 0; fi
+          # --config: as mesmas seções, regras e MinAlertLevel do Vale. --limite-frase auto: o
+          # limite de R4.2 pelo tipo de frase (20 palavras nos passos, 25 nas outras frases).
+          python3 .pts-br/tools/check_spec.py --regras .pts-br/tools/vale --config "$CONFIG" \
+            --limite-frase auto $OPCOES $ARQUIVOS \
+            || [ "$FASE" = "piloto" ]
+
+      - name: Mensagens de interface (R10.5, R10.7, R10.8)
+        if: env.MENSAGENS != ''
+        run: |
+          set -euo pipefail
+          python3 .pts-br/tools/check_spec.py --regras .pts-br/tools/vale --mensagens $OPCOES $MENSAGENS \
+            || [ "$FASE" = "piloto" ]
+
+      - name: Lista branca (relatório para M2, não bloqueia)
+        run: |
+          if [ -z "$ARQUIVOS" ]; then exit 0; fi
+          python3 .pts-br/tools/check_spec.py --lista-branca --resumo \
+            --dicionario .pts-br/03-dicionario.md --termos .pts-br/04-termos-tecnicos.md \
+            $OPCOES $ARQUIVOS || true
+
+      - name: Métricas M1 e M2 (registro da submissão, 05 seção 4.1)
+        run: |
+          if [ -z "$ARQUIVOS" ]; then exit 0; fi
+          {
+            echo '## Métricas PTS-BR (M1 e M2)'
+            echo '```text'
+            python3 .pts-br/tools/check_spec.py --metricas --regras .pts-br/tools/vale --config "$CONFIG" \
+              --dicionario .pts-br/03-dicionario.md --termos .pts-br/04-termos-tecnicos.md \
+              $OPCOES $ARQUIVOS || true
+            echo '```'
+          } | tee --append "$GITHUB_STEP_SUMMARY"
