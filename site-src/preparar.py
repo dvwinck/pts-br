@@ -8,6 +8,8 @@ Os arquivos da especificação não mudam. Na cópia para o site:
 - os links para README.md apontam para a página inicial do site (index.md), e os links para a
   pasta plugins/ apontam para o GitHub;
 - o README.md também vira a página leia-me.md;
+- o README.md do plugin (plugins/pts-br) vira a página claude-code.md, o destino da faixa de
+  anúncio e do botão do cabeçalho (overrides/main.html e overrides/partials/header.html);
 - as 6 partes escondem a navegação lateral (o menu de abas já mostra as partes);
 - os títulos das regras do 02 perdem a marca `[vale]`/`[revisor]` no texto e ganham o
   atributo data-verif (o pts.js mostra a marca como selo). O id do título não muda.
@@ -141,6 +143,9 @@ def main():
                  "05-governanca.md", "06-exemplos.md", "CHANGELOG.md", "BRIEF.md"]:
         copiar(RAIZ / nome, DEST / nome)
     copiar(RAIZ / "README.md", DEST / "leia-me.md")
+    plugin = preparar((RAIZ / "plugins" / "pts-br" / "README.md").read_text(encoding="utf-8"), "claude-code.md")
+    plugin = re.sub(r"\n---\n\s*$", "\n", plugin)
+    (DEST / "claude-code.md").write_text("---\nhide:\n  - navigation\n---\n\n" + plugin, encoding="utf-8")
     for md in sorted((RAIZ / "reviews").rglob("*.md")):
         rel = md.relative_to(RAIZ)
         if "scripts-de-trabalho" not in rel.parts:

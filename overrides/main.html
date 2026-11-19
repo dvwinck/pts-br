@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{#- Faixa de anúncio do plugin do Claude Code (opção D do design). O botão de fechar vem do
+    tema (feature announce.dismiss), e o navegador lembra a escolha do leitor. O tema compara o
+    HTML da faixa para lembrar a escolha. Por isso, o link usa o endereço completo: um link
+    relativo muda de página para página, e a faixa voltaria em cada página. -#}
+{% block announce %}
+<div class="pts-anuncio">
+  <span class="pts-selo-novo">Novo</span>
+  <p class="pts-anuncio__texto">O PTS-BR agora funciona no Claude Code.
+    <span class="pts-anuncio__cmds">O plugin escreve, revisa e ativa o PTS-BR: <code>/pts-br:escrever</code>, <code>/pts-br:revisar</code> e <code>/pts-br:adotar</code>.</span></p>
+  <a class="pts-anuncio__cta" href="{{ config.site_url }}claude-code/">Ver as skills
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+</div>
+{% endblock %}
